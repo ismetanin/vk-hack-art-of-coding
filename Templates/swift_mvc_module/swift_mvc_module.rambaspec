@@ -1,0 +1,11 @@
+# Template information section
+name: "surf_mvp_module"
+summary: ""
+author: "Ivan Smetanin"
+version: "1.0.0"
+license: "MIT"
+
+# The declarations for code files
+code_files:
+- {name: View/ViewController.swift, path: Code/view_controller.swift.liquid}
+- {name: View/ViewController.storyboard, path: Code/view_controller.storyboard.liquid}

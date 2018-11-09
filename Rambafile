@@ -1,0 +1,37 @@
+### Headers settings
+company: Ivan Smetanin
+
+### Xcode project settings
+project_name: sevcabel
+xcodeproj_path: sevcabel.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: sevcabel
+
+# The file path for new modules
+project_file_path: sevcabel/Screens
+
+# The Xcode group path to new modules
+project_group_path: sevcabel/Screens
+
+### Tests generation settings section
+# The tests target name
+test_target: sevcabelTests
+
+# The file path for new tests
+test_file_path: sevcabelTests/Tests/Screens
+
+# The Xcode group path to new tests
+test_group_path: sevcabelTests/Tests/Screens
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Catalogs
+catalogs:
+- 'https://github.com/ismetanin/generamba-modules'
+
+### Templates
+templates:
+- {name: swift_mvc_module}
