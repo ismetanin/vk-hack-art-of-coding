@@ -28,15 +28,28 @@ final class FeedViewController: UIViewController {
         configurePageController()
     }
 
-    // MARK: - Internal helpers
-
     // MARK: - Private methods
 
     private func configurePageController() {
-        let vc1 = UIViewController()
-        vc1.view.backgroundColor = .red
-        let vc2 = UIViewController()
-        vc2.view.backgroundColor = .blue
+        let items1: [FeedItem] = [
+            FeedItem(image: UIImage(named: "big_resale")!, title: "Big Resale Weekend", subtitle: "через 2 дня"),
+            FeedItem(image: UIImage(named: "big_resale")!, title: "Праздник для корги", subtitle: "24 ноября"),
+            FeedItem(image: UIImage(named: "big_resale")!, title: "Сольный концерт певицы Нины Карлссон", subtitle: "13 декабря"),
+            FeedItem(image: UIImage(named: "big_resale")!, title: "One Love Fest", subtitle: "Со 2 по 3 января")
+        ]
+
+        let items2: [FeedItem] = [
+            FeedItem(image: UIImage(named: "devil_taco")!, title: "Big Resale Weekend", subtitle: "через 2 дня"),
+            FeedItem(image: UIImage(named: "devil_taco")!, title: "Праздник для корги", subtitle: "24 ноября"),
+            FeedItem(image: UIImage(named: "devil_taco")!, title: "Сольный концерт певицы Нины Карлссон", subtitle: "13 декабря"),
+            FeedItem(image: UIImage(named: "devil_taco")!, title: "One Love Fest", subtitle: "Со 2 по 3 января")
+        ]
+
+        let vc1 = FeedBlockViewController()
+        vc1.configure(with: items1)
+
+        let vc2 = FeedBlockViewController()
+        vc2.configure(with: items2)
 
         let pager = Pager(container: pageContainer,
                           parent: self,

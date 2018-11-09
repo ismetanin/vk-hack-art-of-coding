@@ -37,6 +37,9 @@
                                         <rect key="frame" x="16" y="93" width="343" height="36"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maps-and-flags" translatesAutoresizingMaskIntoConstraints="NO" id="gRq-rO-r7U">
+                                        <rect key="frame" x="341" y="21.5" width="18" height="23"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -47,6 +50,8 @@
                                     <constraint firstItem="5Gt-C3-iNz" firstAttribute="leading" secondItem="1p5-B0-Bl8" secondAttribute="leading" constant="16" id="DUl-pN-Emk"/>
                                     <constraint firstItem="6i1-wa-yuV" firstAttribute="top" secondItem="1p5-B0-Bl8" secondAttribute="top" constant="16" id="GIN-ED-rNb"/>
                                     <constraint firstAttribute="trailing" secondItem="cHc-BW-JH0" secondAttribute="trailing" constant="16" id="SRN-uy-HEf"/>
+                                    <constraint firstItem="gRq-rO-r7U" firstAttribute="centerY" secondItem="6i1-wa-yuV" secondAttribute="centerY" id="WYk-Mm-0dr"/>
+                                    <constraint firstAttribute="trailing" secondItem="gRq-rO-r7U" secondAttribute="trailing" constant="16" id="WaD-di-AQv"/>
                                     <constraint firstAttribute="height" constant="145" id="csQ-1G-ned"/>
                                     <constraint firstItem="6i1-wa-yuV" firstAttribute="leading" secondItem="1p5-B0-Bl8" secondAttribute="leading" constant="16" id="wtQ-qw-EiT"/>
                                 </constraints>
@@ -78,4 +83,7 @@
             <point key="canvasLocation" x="573.60000000000002" y="-231.63418290854574"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="maps-and-flags" width="18" height="23"/>
+    </resources>
 </document>

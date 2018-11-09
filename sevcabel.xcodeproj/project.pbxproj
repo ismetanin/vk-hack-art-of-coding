@@ -18,6 +18,13 @@
 		8BA619E92196244500375CD9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA619E82196244500375CD9 /* UIViewController.swift */; };
 		8BA619EC2196267A00375CD9 /* Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA619EB2196267A00375CD9 /* Switch.swift */; };
 		8BA619EE2196303D00375CD9 /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA619ED2196303D00375CD9 /* Pager.swift */; };
+		8BA619F02196390000375CD9 /* FeedTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA619EF2196390000375CD9 /* FeedTableViewAdapter.swift */; };
+		8BA619F3219639CC00375CD9 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA619F2219639CC00375CD9 /* FeedItem.swift */; };
+		8BA619F8219639F400375CD9 /* FeedItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA619F6219639F400375CD9 /* FeedItemTableViewCell.swift */; };
+		8BA619F9219639F400375CD9 /* FeedItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BA619F7219639F400375CD9 /* FeedItemTableViewCell.xib */; };
+		8BA619FB21963B7900375CD9 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA619FA21963B7900375CD9 /* UITableView.swift */; };
+		8BA619FD21963B8D00375CD9 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA619FC21963B8D00375CD9 /* NSObject.swift */; };
+		8BA619FF21963DE600375CD9 /* FeedBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA619FE21963DE600375CD9 /* FeedBlockViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +53,13 @@
 		8BA619E82196244500375CD9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		8BA619EB2196267A00375CD9 /* Switch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switch.swift; sourceTree = "<group>"; };
 		8BA619ED2196303D00375CD9 /* Pager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
+		8BA619EF2196390000375CD9 /* FeedTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewAdapter.swift; sourceTree = "<group>"; };
+		8BA619F2219639CC00375CD9 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		8BA619F6219639F400375CD9 /* FeedItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemTableViewCell.swift; sourceTree = "<group>"; };
+		8BA619F7219639F400375CD9 /* FeedItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedItemTableViewCell.xib; sourceTree = "<group>"; };
+		8BA619FA21963B7900375CD9 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		8BA619FC21963B8D00375CD9 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		8BA619FE21963DE600375CD9 /* FeedBlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBlockViewController.swift; sourceTree = "<group>"; };
 		ADCEA090B9342AF9CA1F93DC /* Pods-sevcabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sevcabel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sevcabel/Pods-sevcabel.debug.xcconfig"; sourceTree = "<group>"; };
 		DCBDD5A60465104196EE7760 /* Pods-sevcabelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sevcabelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sevcabelTests/Pods-sevcabelTests.release.xcconfig"; sourceTree = "<group>"; };
 		EEA41C1F88FBA909723CB39C /* FeedViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
@@ -75,6 +89,8 @@
 		32DCBCBAAA78C00F610BE3A6 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				8BA619FE21963DE600375CD9 /* FeedBlockViewController.swift */,
+				8BA619F1219639A700375CD9 /* Reuse */,
 				8BA619ED2196303D00375CD9 /* Pager.swift */,
 				8BA619EB2196267A00375CD9 /* Switch.swift */,
 				39EC0DA9B6AEE82B59397263 /* View */,
@@ -181,8 +197,21 @@
 			isa = PBXGroup;
 			children = (
 				8BA619E82196244500375CD9 /* UIViewController.swift */,
+				8BA619FA21963B7900375CD9 /* UITableView.swift */,
+				8BA619FC21963B8D00375CD9 /* NSObject.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8BA619F1219639A700375CD9 /* Reuse */ = {
+			isa = PBXGroup;
+			children = (
+				8BA619F2219639CC00375CD9 /* FeedItem.swift */,
+				8BA619EF2196390000375CD9 /* FeedTableViewAdapter.swift */,
+				8BA619F6219639F400375CD9 /* FeedItemTableViewCell.swift */,
+				8BA619F7219639F400375CD9 /* FeedItemTableViewCell.xib */,
+			);
+			path = Reuse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +301,7 @@
 				8B1B0E3D2195F42B00735BC7 /* LaunchScreen.storyboard in Resources */,
 				8B1B0E3A2195F42B00735BC7 /* Assets.xcassets in Resources */,
 				610EDEBA741623156B12B33E /* FeedViewController.storyboard in Resources */,
+				8BA619F9219639F400375CD9 /* FeedItemTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,9 +367,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B1B0E332195F42900735BC7 /* AppDelegate.swift in Sources */,
+				8BA619F02196390000375CD9 /* FeedTableViewAdapter.swift in Sources */,
 				8BA619EC2196267A00375CD9 /* Switch.swift in Sources */,
 				8BA619EE2196303D00375CD9 /* Pager.swift in Sources */,
+				8BA619F8219639F400375CD9 /* FeedItemTableViewCell.swift in Sources */,
+				8BA619FB21963B7900375CD9 /* UITableView.swift in Sources */,
 				630EF828B67AB9E8B2B45FC2 /* FeedViewController.swift in Sources */,
+				8BA619FF21963DE600375CD9 /* FeedBlockViewController.swift in Sources */,
+				8BA619FD21963B8D00375CD9 /* NSObject.swift in Sources */,
+				8BA619F3219639CC00375CD9 /* FeedItem.swift in Sources */,
 				8BA619E92196244500375CD9 /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
