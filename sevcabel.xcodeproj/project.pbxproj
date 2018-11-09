@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A607DE3EC057B56E2AB7C9E /* Pods_sevcabelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD3115678916B0945A91B59 /* Pods_sevcabelTests.framework */; };
+		76F71A0ABB65223B76EBA679 /* Pods_sevcabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4B2F4E81594C558E46297D /* Pods_sevcabel.framework */; };
 		8B1B0E332195F42900735BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B0E322195F42900735BC7 /* AppDelegate.swift */; };
 		8B1B0E3A2195F42B00735BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B0E392195F42B00735BC7 /* Assets.xcassets */; };
 		8B1B0E3D2195F42B00735BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B0E3B2195F42B00735BC7 /* LaunchScreen.storyboard */; };
@@ -24,6 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3950A87BD825D2BF9E8E63D4 /* Pods-sevcabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sevcabel.release.xcconfig"; path = "Pods/Target Support Files/Pods-sevcabel/Pods-sevcabel.release.xcconfig"; sourceTree = "<group>"; };
+		3CD3115678916B0945A91B59 /* Pods_sevcabelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sevcabelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		424D8483CBB8A9E3D623FA79 /* Pods-sevcabelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sevcabelTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sevcabelTests/Pods-sevcabelTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B1B0E2F2195F42900735BC7 /* sevcabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sevcabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1B0E322195F42900735BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B1B0E392195F42B00735BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +37,9 @@
 		8B1B0E432195F42B00735BC7 /* sevcabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sevcabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1B0E492195F42B00735BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B1B0E552195F5FA00735BC7 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		ADCEA090B9342AF9CA1F93DC /* Pods-sevcabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sevcabel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sevcabel/Pods-sevcabel.debug.xcconfig"; sourceTree = "<group>"; };
+		DCBDD5A60465104196EE7760 /* Pods-sevcabelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sevcabelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sevcabelTests/Pods-sevcabelTests.release.xcconfig"; sourceTree = "<group>"; };
+		FD4B2F4E81594C558E46297D /* Pods_sevcabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sevcabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F71A0ABB65223B76EBA679 /* Pods_sevcabel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,18 +55,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A607DE3EC057B56E2AB7C9E /* Pods_sevcabelTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46360377A8C938BDCC6ED54B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD4B2F4E81594C558E46297D /* Pods_sevcabel.framework */,
+				3CD3115678916B0945A91B59 /* Pods_sevcabelTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57896D1F9F10D278C19E03FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADCEA090B9342AF9CA1F93DC /* Pods-sevcabel.debug.xcconfig */,
+				3950A87BD825D2BF9E8E63D4 /* Pods-sevcabel.release.xcconfig */,
+				424D8483CBB8A9E3D623FA79 /* Pods-sevcabelTests.debug.xcconfig */,
+				DCBDD5A60465104196EE7760 /* Pods-sevcabelTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8B1B0E262195F42900735BC7 = {
 			isa = PBXGroup;
 			children = (
 				8B1B0E312195F42900735BC7 /* sevcabel */,
 				8B1B0E462195F42B00735BC7 /* sevcabelTests */,
 				8B1B0E302195F42900735BC7 /* Products */,
+				57896D1F9F10D278C19E03FD /* Pods */,
+				46360377A8C938BDCC6ED54B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +153,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B1B0E4C2195F42B00735BC7 /* Build configuration list for PBXNativeTarget "sevcabel" */;
 			buildPhases = (
+				C7E63510372F148EADF388C0 /* [CP] Check Pods Manifest.lock */,
 				8B1B0E2B2195F42900735BC7 /* Sources */,
 				8B1B0E2C2195F42900735BC7 /* Frameworks */,
 				8B1B0E2D2195F42900735BC7 /* Resources */,
@@ -138,6 +171,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B1B0E4F2195F42B00735BC7 /* Build configuration list for PBXNativeTarget "sevcabelTests" */;
 			buildPhases = (
+				85DE46465DC95D20B3686F61 /* [CP] Check Pods Manifest.lock */,
 				8B1B0E3F2195F42B00735BC7 /* Sources */,
 				8B1B0E402195F42B00735BC7 /* Frameworks */,
 				8B1B0E412195F42B00735BC7 /* Resources */,
@@ -209,6 +243,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		85DE46465DC95D20B3686F61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sevcabelTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7E63510372F148EADF388C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sevcabel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B1B0E2B2195F42900735BC7 /* Sources */ = {
@@ -366,6 +447,7 @@
 		};
 		8B1B0E4D2195F42B00735BC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADCEA090B9342AF9CA1F93DC /* Pods-sevcabel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -385,6 +467,7 @@
 		};
 		8B1B0E4E2195F42B00735BC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3950A87BD825D2BF9E8E63D4 /* Pods-sevcabel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -404,6 +487,7 @@
 		};
 		8B1B0E502195F42B00735BC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 424D8483CBB8A9E3D623FA79 /* Pods-sevcabelTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -425,6 +509,7 @@
 		};
 		8B1B0E512195F42B00735BC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCBDD5A60465104196EE7760 /* Pods-sevcabelTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
