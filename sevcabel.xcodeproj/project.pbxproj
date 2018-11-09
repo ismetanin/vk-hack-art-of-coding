@@ -89,10 +89,6 @@
 		32DCBCBAAA78C00F610BE3A6 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				8BA619FE21963DE600375CD9 /* FeedBlockViewController.swift */,
-				8BA619F1219639A700375CD9 /* Reuse */,
-				8BA619ED2196303D00375CD9 /* Pager.swift */,
-				8BA619EB2196267A00375CD9 /* Switch.swift */,
 				39EC0DA9B6AEE82B59397263 /* View */,
 			);
 			path = Feed;
@@ -151,7 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				8B1B0E522195F47300735BC7 /* Application */,
+				8BA619EA2196244B00375CD9 /* Extensions */,
 				8B1B0E532195F47800735BC7 /* Resources */,
+				8BA61A0021964BD600375CD9 /* Reuse */,
 				8B1B0E542195F48100735BC7 /* Screens */,
 			);
 			path = sevcabel;
@@ -171,7 +169,6 @@
 				8B1B0E322195F42900735BC7 /* AppDelegate.swift */,
 				8B1B0E3B2195F42B00735BC7 /* LaunchScreen.storyboard */,
 				8B1B0E3E2195F42B00735BC7 /* Info.plist */,
-				8BA619EA2196244B00375CD9 /* Extensions */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -203,15 +200,50 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		8BA619F1219639A700375CD9 /* Reuse */ = {
+		8BA61A0021964BD600375CD9 /* Reuse */ = {
+			isa = PBXGroup;
+			children = (
+				8BA619ED2196303D00375CD9 /* Pager.swift */,
+				8BA619EB2196267A00375CD9 /* Switch.swift */,
+				8BA61A0221964BEC00375CD9 /* Feed */,
+			);
+			path = Reuse;
+			sourceTree = "<group>";
+		};
+		8BA61A0221964BEC00375CD9 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				8BA61A0321964BFF00375CD9 /* Model */,
+				8BA61A0421964C0600375CD9 /* View */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		8BA61A0321964BFF00375CD9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				8BA619F2219639CC00375CD9 /* FeedItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8BA61A0421964C0600375CD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8BA61A0521964C0F00375CD9 /* Cell */,
+				8BA619FE21963DE600375CD9 /* FeedBlockViewController.swift */,
 				8BA619EF2196390000375CD9 /* FeedTableViewAdapter.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8BA61A0521964C0F00375CD9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
 				8BA619F6219639F400375CD9 /* FeedItemTableViewCell.swift */,
 				8BA619F7219639F400375CD9 /* FeedItemTableViewCell.xib */,
 			);
-			path = Reuse;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -8,7 +8,8 @@
 
 import UIKit
 
-class Pager {
+/// Use this class to add page view controller to your container
+final class Pager {
 
     // MARK: - Private fileds
 
