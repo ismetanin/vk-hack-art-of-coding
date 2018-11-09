@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func initializeRootView() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = FeedViewController.fromStoryboard()
+        let rootViewController = TabBar()
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
     }
