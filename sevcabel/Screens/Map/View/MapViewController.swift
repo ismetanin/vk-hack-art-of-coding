@@ -19,7 +19,7 @@ final class MapViewController: UIViewController {
         static let titleFontSize: CGFloat = 24.0
         static let titleColor = UIColor(red: 0.22, green: 0.23, blue: 0.28, alpha: 1.0)
         static let center = CLLocationCoordinate2D(latitude: 59.924303, longitude: 30.241221)
-        static let zoomLevel = 14.0
+        static let zoomLevel = 15.8
         static let mapStyleURL = URL(string: "mapbox://styles/drxlx/cjobudxet2k6c2st8tv26vw49")
         static let topLeft = CLLocationCoordinate2D(latitude: 59.925371, longitude: 30.238593)
         static let topRight = CLLocationCoordinate2D(latitude: 59.925398, longitude: 30.243716)
@@ -96,9 +96,10 @@ extension MapViewController: MGLMapViewDelegate {
             bottomRight: Constants.bottomRight,
             topRight: Constants.topRight)
 
+        guard let image = UIImage(named: Constants.imageName) else { return }
         let source = MGLImageSource(identifier: Constants.imageName,
                                     coordinateQuad: coordinates,
-                                    image: UIImage(named: Constants.imageName)!)
+                                    image: image)
 
         style.addSource(source)
 
