@@ -19,6 +19,9 @@ final class MapViewController: UIViewController {
 
     private enum Constants {
         static let distanceToCamera: Double = 300.0
+        static let title = "Что происходит"
+        static let titleFontSize: CGFloat = 24.0
+        static let titleColor = UIColor(red: 0.22, green: 0.23, blue: 0.28, alpha: 1.0)
     }
 
     // MARK: - Constants
@@ -45,14 +48,28 @@ final class MapViewController: UIViewController {
         mapView.showsUserLocation = true
         mapView.delegate = self
 
+        configureNavigationBar()
         removeMapBackground()
         addMapImage()
+    }
+
+    private func configureNavigationBar() {
+        navigationItem.title = nil
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: Constants.title,
+                                                           style: .plain,
+                                                           target: nil,
+                                                           action: nil)
+        let font = UIFont.boldSystemFont(ofSize: Constants.titleFontSize)
+        let attributes = [NSAttributedString.Key.font: font,
+                          NSAttributedString.Key.foregroundColor: Constants.titleColor]
+        navigationItem.leftBarButtonItem?.setTitleTextAttributes(attributes,
+                                                                 for: .normal)
     }
 
     private func removeMapBackground() {
         let tiles = MKTileOverlay(urlTemplate: nil)
         tiles.canReplaceMapContent = true
-        mapView.addOverlay(tiles)
+//        mapView.addOverlay(tiles)
     }
 
     private func addMapImage() {

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
+        <!--Что происходит-->
         <scene sceneID="PlN-iW-H7B">
             <objects>
                 <viewController id="h3k-bK-TNO" customClass="MapViewController" customModule="sevcabel" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,26 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satellite" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iv6-mu-owF">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iv6-mu-owF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iv6-mu-owF" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" id="6I4-IS-sMq"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="iv6-mu-owF" secondAttribute="trailing" id="9NF-NA-lVd"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="bottom" secondItem="iv6-mu-owF" secondAttribute="bottom" id="hBB-CH-FvR"/>
-                            <constraint firstItem="iv6-mu-owF" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" id="mXT-G4-2bc"/>
+                            <constraint firstItem="iv6-mu-owF" firstAttribute="top" secondItem="cA6-JB-jfU" secondAttribute="top" id="mXT-G4-2bc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Что происходит" largeTitleDisplayMode="always" id="UK0-vM-VUr"/>
                     <connections>
                         <outlet property="mapView" destination="iv6-mu-owF" id="azZ-fH-sBw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="575" y="-231"/>
+            <point key="canvasLocation" x="1512.8" y="-231.63418290854574"/>
         </scene>
     </scenes>
 </document>
