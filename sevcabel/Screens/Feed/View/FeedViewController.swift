@@ -47,9 +47,23 @@ final class FeedViewController: UIViewController {
 
         let vc1 = FeedBlockViewController()
         vc1.configure(with: items1)
+        vc1.didSelectItem = { [weak self] item in
+            guard let vc = FeedItemDetailViewController.fromStoryboard() as? FeedItemDetailViewController else {
+                return
+            }
+            vc.configure(with: item)
+            self?.present(vc, animated: true, completion: nil)
+        }
 
         let vc2 = FeedBlockViewController()
         vc2.configure(with: items2)
+        vc2.didSelectItem = { [weak self] item in
+            guard let vc = FeedItemDetailViewController.fromStoryboard() as? FeedItemDetailViewController else {
+                return
+            }
+            vc.configure(with: item)
+            self?.present(vc, animated: true, completion: nil)
+        }
 
         let pager = Pager(container: pageContainer,
                           parent: self,

@@ -13,6 +13,7 @@ class FeedBlockViewController: UIViewController {
     // MARK: - Properties
 
     var tableView: UITableView = UITableView()
+    var didSelectItem: ((FeedItem) -> Void)?
     private var items: [FeedItem] = []
     private lazy var adapter = FeedTableViewAdapter(tableView: tableView)
 
@@ -38,6 +39,10 @@ class FeedBlockViewController: UIViewController {
     // MARK: - Private methods
 
     private func configureTableView() {
+        adapter.didSelectItem = { [weak self] item in
+            self?.didSelectItem?(item)
+        }
+
         tableView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
