@@ -17,24 +17,13 @@
                     <view key="view" contentMode="scaleToFill" id="cA6-JB-jfU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iv6-mu-owF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="iv6-mu-owF" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" id="6I4-IS-sMq"/>
-                            <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="iv6-mu-owF" secondAttribute="trailing" id="9NF-NA-lVd"/>
-                            <constraint firstItem="YWU-9O-L7t" firstAttribute="bottom" secondItem="iv6-mu-owF" secondAttribute="bottom" id="hBB-CH-FvR"/>
-                            <constraint firstItem="iv6-mu-owF" firstAttribute="top" secondItem="cA6-JB-jfU" secondAttribute="top" id="mXT-G4-2bc"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/dark-v9"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="Что происходит" largeTitleDisplayMode="always" id="UK0-vM-VUr"/>
-                    <connections>
-                        <outlet property="mapView" destination="iv6-mu-owF" id="azZ-fH-sBw"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

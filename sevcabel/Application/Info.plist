@@ -39,5 +39,7 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Для использования приложения необходимо включить геопозицию</string>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoiZHJ4bHgiLCJhIjoiY2pvYmM1a2UxMWs4YjNxb2RqMGRnOWU5eCJ9.WNEJBPPVulSZsQ8doCPjpw</string>
 </dict>
 </plist>

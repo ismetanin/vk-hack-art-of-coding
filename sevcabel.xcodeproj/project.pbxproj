@@ -16,9 +16,6 @@
 		779D645539E44978933BAE5C /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A89BD8794D299ED698DE5C4 /* MapViewController.storyboard */; };
 		87A2A2F1176B4B640E51F9E7 /* AuthorizationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BE5821EF9B2F374116E894 /* AuthorizationViewController.storyboard */; };
 		8933A0642196E7D000935313 /* MapNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933A0632196E7D000935313 /* MapNavigationController.swift */; };
-		89C1B39E21963F2D00475676 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C1B39D21963F2D00475676 /* Map.swift */; };
-		89C1B3A021963FA800475676 /* MapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C1B39F21963FA800475676 /* MapOverlay.swift */; };
-		89C1B3A2219640FF00475676 /* MapOverlayRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C1B3A1219640FF00475676 /* MapOverlayRenderer.swift */; };
 		8B1B0E332195F42900735BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B0E322195F42900735BC7 /* AppDelegate.swift */; };
 		8B1B0E3A2195F42B00735BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B0E392195F42B00735BC7 /* Assets.xcassets */; };
 		8B1B0E3D2195F42B00735BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B0E3B2195F42B00735BC7 /* LaunchScreen.storyboard */; };
@@ -52,9 +49,6 @@
 		4A89BD8794D299ED698DE5C4 /* MapViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		5A41184B5D3F30845B8BA30F /* FeedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		8933A0632196E7D000935313 /* MapNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavigationController.swift; sourceTree = "<group>"; };
-		89C1B39D21963F2D00475676 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
-		89C1B39F21963FA800475676 /* MapOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOverlay.swift; sourceTree = "<group>"; };
-		89C1B3A1219640FF00475676 /* MapOverlayRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOverlayRenderer.swift; sourceTree = "<group>"; };
 		8B1B0E2F2195F42900735BC7 /* sevcabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sevcabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1B0E322195F42900735BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B1B0E392195F42B00735BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -142,9 +136,6 @@
 		6E8867A34CE2BC02C22FB157 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				89C1B39D21963F2D00475676 /* Map.swift */,
-				89C1B39F21963FA800475676 /* MapOverlay.swift */,
-				89C1B3A1219640FF00475676 /* MapOverlayRenderer.swift */,
 				BFF1F064516FD97D30FB9D40 /* MapViewController.swift */,
 				4A89BD8794D299ED698DE5C4 /* MapViewController.storyboard */,
 			);
@@ -313,6 +304,7 @@
 				8B1B0E2B2195F42900735BC7 /* Sources */,
 				8B1B0E2C2195F42900735BC7 /* Frameworks */,
 				8B1B0E2D2195F42900735BC7 /* Resources */,
+				CFE6876446A283831CF842D8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -448,6 +440,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CFE6876446A283831CF842D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-sevcabel/Pods-sevcabel-frameworks.sh",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sevcabel/Pods-sevcabel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -456,10 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B1B0E332195F42900735BC7 /* AppDelegate.swift in Sources */,
-				89C1B3A2219640FF00475676 /* MapOverlayRenderer.swift in Sources */,
 				3C10679FD4927776F1066544 /* MapViewController.swift in Sources */,
-				89C1B39E21963F2D00475676 /* Map.swift in Sources */,
-				89C1B3A021963FA800475676 /* MapOverlay.swift in Sources */,
 				8BA619F02196390000375CD9 /* FeedTableViewAdapter.swift in Sources */,
 				8BA619EC2196267A00375CD9 /* Switch.swift in Sources */,
 				8BA61A0721964D9000375CD9 /* TabBar.swift in Sources */,
