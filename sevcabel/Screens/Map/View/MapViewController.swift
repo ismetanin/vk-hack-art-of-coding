@@ -56,7 +56,6 @@ final class MapViewController: UIViewController {
     }
 
     private func addMapImage() {
-        let map = Map()
         let mapOverlay = MapOverlay(map: map)
         mapView.addOverlay(mapOverlay)
     }
