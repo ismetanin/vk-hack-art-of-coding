@@ -43,7 +43,7 @@ final class TabBar: UITabBarController {
         )
         controllers.append(feed)
 
-        let profile = AuthorizationViewController.fromStoryboard()
+        let profile = ProfileViewController.fromStoryboard()
         profile.tabBarItem = UITabBarItem(
             title: "Профиль",
             image: UIImage(named: "profile"),
