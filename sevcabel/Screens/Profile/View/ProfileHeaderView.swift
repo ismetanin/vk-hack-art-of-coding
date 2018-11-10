@@ -18,7 +18,17 @@ final class ProfileHeaderView: UIView {
 
     @IBOutlet private var dataSubviews: [UIView]!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
-    
+
+    // MARK: - IBActions
+
+    @IBAction func mySevIdButtonAction(_ sender: Any) {
+        showSevIdAction?()
+    }
+
+    // MARK: - Properties
+
+    var showSevIdAction: (() -> Void)?
+
     // MARK: - UIView
 
     override func awakeFromNib() {

@@ -11,6 +11,9 @@ import SwiftyVK
 
 final class ProfileViewController: FeedBlockViewController {
 
+    // MARK: - Properties
+
+    private lazy var transition = DrawerCustomTransitionDelegate()
     private lazy var header: ProfileHeaderView = ProfileHeaderView.fromXib() ?? ProfileHeaderView()
 
     // MARK: - UIViewController
@@ -19,6 +22,12 @@ final class ProfileViewController: FeedBlockViewController {
         super.viewDidLoad()
         loadUserInfo()
         tableView.setTableHeaderView(header: header)
+        header.showSevIdAction = {
+            let controller = IdentifierViewController.fromStoryboard()
+            controller.modalPresentationStyle = .overFullScreen
+            controller.transitioningDelegate = self.transition
+            self.present(controller, animated: true, completion: nil)
+        }
     }
 
     override func viewDidLayoutSubviews() {
