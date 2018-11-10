@@ -14,14 +14,32 @@ final class TabBar: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.isTranslucent = false
-        tabBar.tintColor = .white
-        tabBar.barTintColor = UIColor(red: 0.22, green: 0.3, blue: 0.82, alpha: 1)
-        selectedIndex = 0
-        self.setViewControllers(tabBarControllers(), animated: false)
+        configureTabBar()
+        subscribeOnNotifications()
     }
 
     // MARK: - Private methods
+
+    private func subscribeOnNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(userAuthorized), name: .userAuthorized, object: nil)
+    }
+
+    @objc
+    private func userAuthorized() {
+        var controllers = self.viewControllers
+        controllers?.removeAll(where: { $0 is AuthorizationViewController })
+        controllers?.append(profileTabController())
+        self.setViewControllers(controllers, animated: true)
+    }
+
+    private func configureTabBar() {
+        tabBar.isTranslucent = false
+        tabBar.tintColor = .white
+        tabBar.unselectedItemTintColor = UIColor(red: 0.42, green: 0.48, blue: 0.85, alpha: 1)
+        tabBar.barTintColor = UIColor(red: 0.17, green: 0.22, blue: 0.56, alpha: 1)
+        selectedIndex = 0
+        self.setViewControllers(tabBarControllers(), animated: false)
+    }
 
     private func tabBarControllers() -> [UIViewController] {
         var controllers: [UIViewController] = []
@@ -43,15 +61,30 @@ final class TabBar: UITabBarController {
         )
         controllers.append(feed)
 
-        let profile = AuthorizationViewController.fromStoryboard()
-        profile.tabBarItem = UITabBarItem(
-            title: "Профиль",
-            image: UIImage(named: "profile"),
-            tag: 0
-        )
+        let profile = profileTabController()
         controllers.append(profile)
 
         return controllers
+    }
+
+    private func profileTabController() -> UIViewController {
+        if UserDefaults.standard.isUserAuthorized {
+            let profile = ProfileViewController.fromStoryboard()
+            profile.tabBarItem = UITabBarItem(
+                title: "Профиль",
+                image: UIImage(named: "profile"),
+                tag: 0
+            )
+            return profile
+        } else {
+            let profile = AuthorizationViewController.fromStoryboard()
+            profile.tabBarItem = UITabBarItem(
+                title: "Профиль",
+                image: UIImage(named: "profile"),
+                tag: 0
+            )
+            return profile
+        }
     }
 
 }

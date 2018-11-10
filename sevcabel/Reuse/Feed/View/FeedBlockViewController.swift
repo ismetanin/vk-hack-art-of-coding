@@ -8,12 +8,13 @@
 
 import UIKit
 
-final class FeedBlockViewController: UIViewController {
+class FeedBlockViewController: UIViewController {
 
     // MARK: - Properties
 
+    var tableView: UITableView = UITableView()
+    var didSelectItem: ((FeedItem) -> Void)?
     private var items: [FeedItem] = []
-    private var tableView: UITableView = UITableView()
     private lazy var adapter = FeedTableViewAdapter(tableView: tableView)
 
     // MARK: - UIViewController
@@ -26,18 +27,22 @@ final class FeedBlockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-        adapter.configure(with: items)
     }
 
     // MARK: - Internal methods
 
     func configure(with items: [FeedItem]) {
         self.items = items
+        adapter.configure(with: items)
     }
 
     // MARK: - Private methods
 
     private func configureTableView() {
+        adapter.didSelectItem = { [weak self] item in
+            self?.didSelectItem?(item)
+        }
+
         tableView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([

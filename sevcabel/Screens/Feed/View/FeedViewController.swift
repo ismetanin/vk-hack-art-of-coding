@@ -47,9 +47,23 @@ final class FeedViewController: UIViewController {
 
         let vc1 = FeedBlockViewController()
         vc1.configure(with: items1)
+        vc1.didSelectItem = { [weak self] item in
+            guard let vc = FeedItemDetailViewController.fromStoryboard() as? FeedItemDetailViewController else {
+                return
+            }
+            vc.configure(with: item)
+            self?.present(vc, animated: true, completion: nil)
+        }
 
         let vc2 = FeedBlockViewController()
         vc2.configure(with: items2)
+        vc2.didSelectItem = { [weak self] item in
+            guard let vc = FeedItemDetailViewController.fromStoryboard() as? FeedItemDetailViewController else {
+                return
+            }
+            vc.configure(with: item)
+            self?.present(vc, animated: true, completion: nil)
+        }
 
         let pager = Pager(container: pageContainer,
                           parent: self,
@@ -72,18 +86,18 @@ final class FeedViewController: UIViewController {
         switchControl.leftText = "Мероприятия"
         switchControl.rightText = "Резиденты"
 
-        switchControl.tintColor = UIColor(red: 0.22, green: 0.3, blue: 0.82, alpha: 1)
+        switchControl.tintColor = UIColor(red: 0.17, green: 0.22, blue: 0.56, alpha: 1)
         switchControl.disabledColor = .black
         switchControl.backColor = .white
 
         switchControl.disabledTextColor = UIColor(red: 0.22, green: 0.23, blue: 0.27, alpha: 1)
         switchControl.selectedTextColor = .white
         
-        switchControl.backgroundLayer.borderColor = UIColor(red: 0.22, green: 0.3, blue: 0.82, alpha: 1).cgColor
+        switchControl.backgroundLayer.borderColor = UIColor(red: 0.17, green: 0.22, blue: 0.56, alpha: 1).cgColor
         switchControl.backgroundLayer.borderWidth = 2
-        switchControl.switchLayer.borderColor = UIColor(red: 0.22, green: 0.3, blue: 0.82, alpha: 1).cgColor
+        switchControl.switchLayer.borderColor = UIColor(red: 0.17, green: 0.22, blue: 0.56, alpha: 1).cgColor
         switchControl.switchLayer.borderWidth = 2
-        switchControl.switchLayer.backgroundColor = UIColor(red: 0.22, green: 0.3, blue: 0.82, alpha: 1).cgColor
+        switchControl.switchLayer.backgroundColor = UIColor(red: 0.17, green: 0.22, blue: 0.56, alpha: 1).cgColor
 
         switchControl.reloadLabelsTextColor()
 

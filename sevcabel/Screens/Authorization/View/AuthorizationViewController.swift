@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import VK_ios_sdk
 
 final class AuthorizationViewController: UIViewController {
 
     // MARK: - NSLayoutConstraints
 
     @IBOutlet private weak var backgroundImageViewTopConstraint: NSLayoutConstraint!
+
+    // MARK: - IBActions
+
+    @IBAction func vkAuthAction(_ sender: Any) {
+        VKSdk.authorize(["offline", "email", "wall"])
+    }
 
     // MARK: - Properties
 
