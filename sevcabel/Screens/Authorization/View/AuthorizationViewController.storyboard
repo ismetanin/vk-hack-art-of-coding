@@ -58,6 +58,9 @@
                                                 <integer key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="vkAuthAction:" destination="h3k-bK-TNO" eventType="touchUpInside" id="3h1-ue-3cp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owY-al-tEJ">
                                         <rect key="frame" x="0.0" y="258.5" width="343" height="50"/>

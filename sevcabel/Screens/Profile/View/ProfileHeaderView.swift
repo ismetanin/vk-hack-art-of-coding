@@ -12,8 +12,13 @@ final class ProfileHeaderView: UIView {
 
     // MARK: - IBOutlets
 
+    @IBOutlet private weak var photoImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var mySevIdButton: UIButton!
 
+    @IBOutlet private var dataSubviews: [UIView]!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+    
     // MARK: - UIView
 
     override func awakeFromNib() {
@@ -21,6 +26,18 @@ final class ProfileHeaderView: UIView {
         mySevIdButton.setTitleColor(.gray, for: .highlighted)
         mySevIdButton.setTitleColor(.gray, for: .focused)
         mySevIdButton.setTitleColor(.gray, for: .selected)
+
+        activityIndicator.startAnimating()
+        dataSubviews.forEach { $0.alpha = 0 }
+    }
+
+    func configure(with user: User) {
+        nameLabel.text = user.firstname + " " + user.lastname
+        photoImageView.loadImage(with: user.photoStringURL)
+        UIView.animate(withDuration: 0.3) {
+            self.dataSubviews.forEach { $0.alpha = 1 }
+            self.activityIndicator.alpha = 0
+        }
     }
     
 

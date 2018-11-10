@@ -7,22 +7,18 @@
 //
 
 import UIKit
+import SwiftyVK
 
 final class ProfileViewController: FeedBlockViewController {
+
+    private lazy var header: ProfileHeaderView = ProfileHeaderView.fromXib() ?? ProfileHeaderView()
 
     // MARK: - UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.setTableHeaderView(header: ProfileHeaderView.fromXib() ?? UIView())
-
-        let items: [FeedItem] = [
-            FeedItem(image: UIImage(named: "big_resale")!, title: "Big Resale Weekend", subtitle: "через 2 дня"),
-            FeedItem(image: UIImage(named: "big_resale")!, title: "Праздник для корги", subtitle: "24 ноября"),
-            FeedItem(image: UIImage(named: "big_resale")!, title: "Сольный концерт певицы Нины Карлссон", subtitle: "13 декабря"),
-            FeedItem(image: UIImage(named: "big_resale")!, title: "One Love Fest", subtitle: "Со 2 по 3 января")
-        ]
-        self.configure(with: items)
+        loadUserInfo()
+        tableView.setTableHeaderView(header: header)
     }
 
     override func viewDidLayoutSubviews() {
@@ -33,6 +29,40 @@ final class ProfileViewController: FeedBlockViewController {
             self.tableView.beginUpdates()
             self.tableView.endUpdates()
         }
+    }
+
+    // MARK: - Private methods
+
+    private func loadUserInfo() {
+        VK.API.Users.get([.fields: "photo_200"])
+            .onSuccess { [weak self] info in
+                let decoder = JSONDecoder()
+                guard let user = try decoder.decode(Array<User>.self, from: info).first else {
+                    return
+                }
+                self?.configure(with: user)
+            }
+            .onError { error in
+                print(error)
+            }
+            .send()
+    }
+
+    private func configure(with user: User) {
+        DispatchQueue.main.async {
+            self.header.configure(with: user)
+            self.fillTableWithItems()
+        }
+    }
+
+    private func fillTableWithItems() {
+        let items: [FeedItem] = [
+            FeedItem(image: UIImage(named: "big_resale")!, title: "Big Resale Weekend", subtitle: "через 2 дня"),
+            FeedItem(image: UIImage(named: "big_resale")!, title: "Праздник для корги", subtitle: "24 ноября"),
+            FeedItem(image: UIImage(named: "big_resale")!, title: "Сольный концерт певицы Нины Карлссон", subtitle: "13 декабря"),
+            FeedItem(image: UIImage(named: "big_resale")!, title: "One Love Fest", subtitle: "Со 2 по 3 января")
+        ]
+        self.configure(with: items)
     }
 
 }
