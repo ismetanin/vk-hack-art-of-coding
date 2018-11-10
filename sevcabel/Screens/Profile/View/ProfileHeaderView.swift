@@ -8,14 +8,20 @@
 
 import UIKit
 
-class ProfileHeaderView: UIView {
+final class ProfileHeaderView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    // MARK: - IBOutlets
+
+    @IBOutlet private weak var mySevIdButton: UIButton!
+
+    // MARK: - UIView
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        mySevIdButton.setTitleColor(.gray, for: .highlighted)
+        mySevIdButton.setTitleColor(.gray, for: .focused)
+        mySevIdButton.setTitleColor(.gray, for: .selected)
     }
-    */
+    
 
 }
