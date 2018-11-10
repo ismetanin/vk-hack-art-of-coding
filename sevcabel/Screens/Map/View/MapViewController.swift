@@ -72,6 +72,8 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MapOverlay {
             return MapOverlayRenderer(overlay: overlay)
+        } else if overlay is MKTileOverlay {
+            return MKTileOverlayRenderer(overlay: overlay)
         } else {
             return MKOverlayRenderer()
         }
