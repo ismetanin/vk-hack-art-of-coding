@@ -28,6 +28,13 @@ final class ProfileViewController: FeedBlockViewController {
             controller.transitioningDelegate = self.transition
             self.present(controller, animated: true, completion: nil)
         }
+        didSelectItem = { [weak self] item in
+            guard let vc = FeedItemDetailViewController.fromStoryboard() as? FeedItemDetailViewController else {
+                return
+            }
+            vc.configure(with: item)
+            self?.present(vc, animated: true, completion: nil)
+        }
     }
 
     override func viewDidLayoutSubviews() {
@@ -78,7 +85,8 @@ final class ProfileViewController: FeedBlockViewController {
                 Специально для наших подписчиков действует специальный промокод с 50%-ной скидкой при покупке билета: PORTSEVCABFRIENDPSGX3Q.
                 Код действителен на первые 50 активаций👇
                 """,
-                     isEvent: true
+                     isEvent: true,
+                     isRegistered: true
             ),
             FeedItem(title: "One Love Fest",
                      subtitle: "Со 2 по 3 января",
@@ -95,7 +103,8 @@ final class ProfileViewController: FeedBlockViewController {
 
                     One Love Fest — альтернативный ответ на вопрос, над которым бьются лучшие умы человечества, «чем заняться в новогодние каникулы?». 💕
                     """,
-                     isEvent: true
+                     isEvent: true,
+                     isRegistered: true
             )
         ]
         self.configure(with: items)

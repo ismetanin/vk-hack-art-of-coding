@@ -47,7 +47,8 @@ final class FeedViewController: UIViewController {
                 Для кого:
                 всех и каждого, вход свободный!
                 """,
-                     isEvent: true
+                     isEvent: true,
+                     isRegistered: false
             ),
             FeedItem(title: "Сольный концерт певицы Нины Карлссон",
                      subtitle: "13 декабря",
@@ -61,7 +62,8 @@ final class FeedViewController: UIViewController {
                 Специально для наших подписчиков действует специальный промокод с 50%-ной скидкой при покупке билета: PORTSEVCABFRIENDPSGX3Q.
                 Код действителен на первые 50 активаций👇
                 """,
-                     isEvent: true
+                     isEvent: true,
+                     isRegistered: false
             ),
             FeedItem(title: "One Love Fest",
                      subtitle: "Со 2 по 3 января",
@@ -78,7 +80,8 @@ final class FeedViewController: UIViewController {
 
                     One Love Fest — альтернативный ответ на вопрос, над которым бьются лучшие умы человечества, «чем заняться в новогодние каникулы?». 💕
                     """,
-                     isEvent: true
+                     isEvent: true,
+                     isRegistered: false
             )
         ]
 
@@ -101,7 +104,8 @@ final class FeedViewController: UIViewController {
                     Бертгольд центр - каждый день
                     Порт Севкабель - по выходным
                     """,
-                     isEvent: false
+                     isEvent: false,
+                     isRegistered: false
             )
         ]
 

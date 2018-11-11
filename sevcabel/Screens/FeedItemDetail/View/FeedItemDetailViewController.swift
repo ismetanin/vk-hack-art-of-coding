@@ -26,7 +26,18 @@ final class FeedItemDetailViewController: UIViewController {
     @IBAction private func cancelButtonAction(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    @IBAction func goAction(_ sender: Any) {
+        if goButton.titleLabel?.text == "Я пойду" {
 
+        } else {
+            let controller = IdentifierViewController.fromStoryboard() as! IdentifierViewController
+            controller.configureForTicket()
+            controller.modalPresentationStyle = .overFullScreen
+            controller.transitioningDelegate = self.transition
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+    
     // MARK: - NSLayoutConstraints
 
     @IBOutlet private weak var descriptionToGoButton: NSLayoutConstraint!
@@ -37,6 +48,7 @@ final class FeedItemDetailViewController: UIViewController {
     // MARK: - Properties
 
     private var item: FeedItem!
+    private lazy var transition = DrawerCustomTransitionDelegate()
 
     // MARK: - UIViewController
 
@@ -69,6 +81,12 @@ final class FeedItemDetailViewController: UIViewController {
             descriptionToGoButton.priority = .defaultLow
             descriptionToBottom.priority = .defaultHigh
             goButton.isHidden = true
+        }
+
+        if item.isRegistered {
+            goButton.setTitle("Мой билет", for: .normal)
+        } else {
+            goButton.setTitle("Я пойду", for: .normal)
         }
     }
 

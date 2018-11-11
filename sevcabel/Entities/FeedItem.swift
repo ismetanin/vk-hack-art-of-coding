@@ -15,4 +15,5 @@ struct FeedItem {
     let fullImage: UIImage
     let description: String
     let isEvent: Bool
+    let isRegistered: Bool
 }
