@@ -12,6 +12,10 @@ import CoreLocation
 
 final class MapViewController: UIViewController {
 
+    // MARK: - IBOutlets
+
+    @IBOutlet weak var arButtonContainerView: UIView!
+
     // MARK: - IBActions
 
     @IBAction func zoomInButtonAction(_ sender: Any) {
@@ -34,6 +38,10 @@ final class MapViewController: UIViewController {
                            animated: true)
     }
     
+    @IBAction func arButtonAction(_ sender: Any) {
+        present(ARMapViewController(), animated: true, completion: nil)
+    }
+
     // MARK: - Enums
 
     private enum Constants {
@@ -73,6 +81,9 @@ final class MapViewController: UIViewController {
         configureMapView()
         useLocation()
         addAnnotations()
+
+        arButtonContainerView.layer.masksToBounds = true
+        arButtonContainerView.layer.cornerRadius = 18.0
     }
 
     private func configureMapView() {

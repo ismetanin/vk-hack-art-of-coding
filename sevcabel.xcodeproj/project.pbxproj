@@ -29,6 +29,7 @@
 		89A564EF2197D1A500DD27D9 /* Zoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A564EE2197D1A500DD27D9 /* Zoom.swift */; };
 		89A564F82197F68700DD27D9 /* PointAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A564F72197F68700DD27D9 /* PointAnnotationView.swift */; };
 		89A564FA2197FA1F00DD27D9 /* PulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A564F92197FA1F00DD27D9 /* PulseLayer.swift */; };
+		89A564FE2198179900DD27D9 /* MapNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A564FD2198179900DD27D9 /* MapNavigationController.swift */; };
 		8B1B0E332195F42900735BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B0E322195F42900735BC7 /* AppDelegate.swift */; };
 		8B1B0E3A2195F42B00735BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B0E392195F42B00735BC7 /* Assets.xcassets */; };
 		8B1B0E3D2195F42B00735BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B0E3B2195F42B00735BC7 /* LaunchScreen.storyboard */; };
@@ -96,6 +97,7 @@
 		89A564EE2197D1A500DD27D9 /* Zoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zoom.swift; sourceTree = "<group>"; };
 		89A564F72197F68700DD27D9 /* PointAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotationView.swift; sourceTree = "<group>"; };
 		89A564F92197FA1F00DD27D9 /* PulseLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseLayer.swift; sourceTree = "<group>"; };
+		89A564FD2198179900DD27D9 /* MapNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapNavigationController.swift; sourceTree = "<group>"; };
 		8B1B0E2F2195F42900735BC7 /* sevcabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sevcabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1B0E322195F42900735BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B1B0E392195F42B00735BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 		A193CA59B9398A44BE5417CA /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				89A564FD2198179900DD27D9 /* MapNavigationController.swift */,
 				6E8867A34CE2BC02C22FB157 /* View */,
 			);
 			path = Map;
@@ -728,6 +731,7 @@
 				FFBE45CA1A321578D3227C3E /* ProfileViewController.swift in Sources */,
 				B2CD82941B380DE1F75751BA /* FeedItemDetailViewController.swift in Sources */,
 				8B87307821978FF90059D4EA /* User.swift in Sources */,
+				89A564FE2198179900DD27D9 /* MapNavigationController.swift in Sources */,
 				96E14A9B4D6A602932EC813C /* IdentifierViewController.swift in Sources */,
 				8B87307D2197A0750059D4EA /* DrawerCustomTransitionDelegate.swift in Sources */,
 			);
