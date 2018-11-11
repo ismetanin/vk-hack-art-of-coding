@@ -44,7 +44,6 @@ final class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupInitialState()
-        useLocation()
     }
 
     // MARK: - Private helpers
@@ -52,6 +51,8 @@ final class MapViewController: UIViewController {
     private func setupInitialState() {
         configureNavigationBar()
         configureMapView()
+        useLocation()
+        addAnnotations()
     }
 
     private func configureNavigationBar() {
@@ -84,6 +85,68 @@ final class MapViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
     }
+
+    private func addAnnotations() {
+        let firstCoordinate = CLLocationCoordinate2D(latitude: 59.924829, longitude: 30.239357)
+        let firstAnnotation = PointAnnotation(type: .fork, coordinate: firstCoordinate)
+        mapView?.addAnnotation(firstAnnotation)
+
+        let secondCoordinate = CLLocationCoordinate2D(latitude: 59.925044, longitude: 30.239910)
+        let secondAnnotation = PointAnnotation(type: .beer, coordinate: secondCoordinate)
+        mapView?.addAnnotation(secondAnnotation)
+
+        let thirdCoordinate = CLLocationCoordinate2D(latitude: 59.925286, longitude: 30.240473)
+        let thirdAnnotation = PointAnnotation(type: .beer, coordinate: thirdCoordinate)
+        mapView?.addAnnotation(thirdAnnotation)
+
+        let fourthCoordinate = CLLocationCoordinate2D(latitude: 59.92516, longitude: 30.240854)
+        let fourthAnnotation = PointAnnotation(type: .music, coordinate: fourthCoordinate)
+        mapView?.addAnnotation(fourthAnnotation)
+
+        let fifthCoordinate = CLLocationCoordinate2D(latitude: 59.923926, longitude: 30.240628)
+        let fifthAnnotation = PointAnnotation(type: .binoculars, coordinate: fifthCoordinate)
+        mapView?.addAnnotation(fifthAnnotation)
+
+        let sixthCoordinate = CLLocationCoordinate2D(latitude: 59.923606, longitude: 30.241342)
+        let sixthAnnotation = PointAnnotation(type: .binoculars, coordinate: sixthCoordinate)
+        mapView?.addAnnotation(sixthAnnotation)
+
+        let seventhCoordinate = CLLocationCoordinate2D(latitude: 59.924324, longitude: 30.240827)
+        let seventhAnnotation = PointAnnotation(type: .toilet, coordinate: seventhCoordinate)
+        mapView?.addAnnotation(seventhAnnotation)
+
+        let eighthCoordinate = CLLocationCoordinate2D(latitude: 59.924249, longitude: 30.241058)
+        let eighthAnnotation = PointAnnotation(type: .child, coordinate: eighthCoordinate)
+        mapView?.addAnnotation(eighthAnnotation)
+
+        let ninthCoordinate = CLLocationCoordinate2D(latitude: 59.924563, longitude: 30.241337)
+        let ninthAnnotation = PointAnnotation(type: .coffee, coordinate: ninthCoordinate)
+        mapView?.addAnnotation(ninthAnnotation)
+
+        let tenthCoordinate = CLLocationCoordinate2D(latitude: 59.924665, longitude: 30.241578)
+        let tenthAnnotation = PointAnnotation(type: .coffee, coordinate: tenthCoordinate)
+        mapView?.addAnnotation(tenthAnnotation)
+
+        let eleventhCoordinate = CLLocationCoordinate2D(latitude: 59.924552, longitude: 30.241857)
+        let eleventhAnnotation = PointAnnotation(type: .coffee, coordinate: eleventhCoordinate)
+        mapView?.addAnnotation(eleventhAnnotation)
+
+        let twelvethCoordinate = CLLocationCoordinate2D(latitude: 59.924407, longitude: 30.242136)
+        let twelvethAnnotation = PointAnnotation(type: .fork, coordinate: twelvethCoordinate)
+        mapView?.addAnnotation(twelvethAnnotation)
+
+        let thirteenthCoordinate = CLLocationCoordinate2D(latitude: 59.924262, longitude: 30.241937)
+        let thirteenthAnnotation = PointAnnotation(type: .fork, coordinate: thirteenthCoordinate)
+        mapView?.addAnnotation(thirteenthAnnotation)
+
+        let fourteenthCoordinate = CLLocationCoordinate2D(latitude: 59.924340, longitude: 30.241717)
+        let fourteenthAnnotation = PointAnnotation(type: .shop, coordinate: fourteenthCoordinate)
+        mapView?.addAnnotation(fourteenthAnnotation)
+
+        let fifteenthCoordinate = CLLocationCoordinate2D(latitude: 59.924389, longitude: 30.241543)
+        let fifteenthAnnotation = PointAnnotation(type: .shop, coordinate: fifteenthCoordinate)
+        mapView?.addAnnotation(fifteenthAnnotation)
+    }
 }
 
 // MARK: - MKMapViewDelegate
@@ -107,9 +170,18 @@ extension MapViewController: MGLMapViewDelegate {
 
         for layer in style.layers.reversed() {
             if layer is MGLSymbolStyleLayer {
-                style.insertLayer(mapLayer, above: layer)
+                style.insertLayer(mapLayer, below: layer)
                 break
             }
         }
+    }
+
+    func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
+        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "some")
+        return annotationView
+    }
+
+    func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
+        return (annotation as? PointAnnotation)?.image
     }
 }
