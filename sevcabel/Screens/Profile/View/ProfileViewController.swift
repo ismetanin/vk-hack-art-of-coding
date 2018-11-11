@@ -50,18 +50,20 @@ final class ProfileViewController: FeedBlockViewController {
     // MARK: - Private methods
 
     private func loadUserInfo() {
-        VK.API.Users.get([.fields: "photo_200"])
-            .onSuccess { [weak self] info in
-                let decoder = JSONDecoder()
-                guard let user = try decoder.decode(Array<User>.self, from: info).first else {
-                    return
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            VK.API.Users.get([.fields: "photo_200"])
+                .onSuccess { [weak self] info in
+                    let decoder = JSONDecoder()
+                    guard let user = try decoder.decode(Array<User>.self, from: info).first else {
+                        return
+                    }
+                    self?.configure(with: user)
                 }
-                self?.configure(with: user)
-            }
-            .onError { error in
-                print(error)
-            }
-            .send()
+                .onError { error in
+                    print(error)
+                }
+                .send()
+        }
     }
 
     private func configure(with user: User) {
