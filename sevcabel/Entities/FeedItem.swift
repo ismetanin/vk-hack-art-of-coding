@@ -9,7 +9,10 @@
 import UIKit
 
 struct FeedItem {
-    let image: UIImage
     let title: String
     let subtitle: String
+    let image: UIImage
+    let fullImage: UIImage
+    let description: String
+    let isEvent: Bool
 }

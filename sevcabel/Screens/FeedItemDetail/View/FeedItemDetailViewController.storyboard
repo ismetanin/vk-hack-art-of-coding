@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="one_love" translatesAutoresizingMaskIntoConstraints="NO" id="Gad-Ob-TOR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="one_love" translatesAutoresizingMaskIntoConstraints="NO" id="Gad-Ob-TOR">
                                 <rect key="frame" x="0.0" y="20" width="375" height="307"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Gad-Ob-TOR" secondAttribute="height" multiplier="375:307" id="fQj-Ot-MjA"/>
@@ -29,10 +29,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t7-Sg-INu">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L8t-rU-a42">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1017"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="236"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-3 января" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1g-Mt-Cys">
                                                 <rect key="frame" x="16" y="24" width="92.5" height="21.5"/>
@@ -47,10 +47,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxR-eF-awS">
-                                                <rect key="frame" x="17" y="88" width="342" height="906"/>
+                                                <rect key="frame" x="17" y="88" width="342" height="62"/>
                                                 <attributedString key="attributedText">
-                                                    <fragment>
-                                                        <mutableString key="content">Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. </mutableString>
+                                                    <fragment content="Первый зимний музыкальный фестиваль города с оригинальной концепцией и весомым лайнапом на два дня. ">
                                                         <attributes>
                                                             <font key="NSFont" size="16" name="SFProDisplay-Regular"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
@@ -59,18 +58,38 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgq-jc-J1Z">
+                                                <rect key="frame" x="16" y="170" width="343" height="50"/>
+                                                <color key="backgroundColor" red="0.16862745098039217" green="0.22352941176470587" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="DCx-zc-zTf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <state key="normal" title="Я пойду">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="JxR-eF-awS" secondAttribute="bottom" priority="250" constant="20" id="4j8-WF-D2B"/>
                                             <constraint firstItem="H1g-Mt-Cys" firstAttribute="top" secondItem="L8t-rU-a42" secondAttribute="top" constant="24" id="AsP-6R-NyM"/>
                                             <constraint firstAttribute="trailing" secondItem="JxR-eF-awS" secondAttribute="trailing" constant="16" id="BlS-X4-fgT"/>
                                             <constraint firstItem="lhD-AH-k22" firstAttribute="top" secondItem="H1g-Mt-Cys" secondAttribute="bottom" constant="3.5" id="D2Y-fn-Sap"/>
                                             <constraint firstItem="JxR-eF-awS" firstAttribute="leading" secondItem="L8t-rU-a42" secondAttribute="leading" constant="17" id="Lpr-aL-Q5h"/>
                                             <constraint firstItem="lhD-AH-k22" firstAttribute="leading" secondItem="L8t-rU-a42" secondAttribute="leading" constant="16" id="MKW-jh-RB8"/>
                                             <constraint firstItem="H1g-Mt-Cys" firstAttribute="leading" secondItem="L8t-rU-a42" secondAttribute="leading" constant="16" id="d8O-LO-tEJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="Hgq-jc-J1Z" secondAttribute="bottom" constant="16" id="gGO-9e-lal"/>
+                                            <constraint firstItem="Hgq-jc-J1Z" firstAttribute="top" secondItem="JxR-eF-awS" secondAttribute="bottom" priority="750" constant="20" id="hZv-0H-uUh"/>
                                             <constraint firstItem="JxR-eF-awS" firstAttribute="top" secondItem="lhD-AH-k22" secondAttribute="bottom" constant="10" id="iOc-b1-yVk"/>
                                             <constraint firstAttribute="trailing" secondItem="lhD-AH-k22" secondAttribute="trailing" constant="18" id="jcG-PF-zcH"/>
-                                            <constraint firstAttribute="bottom" secondItem="JxR-eF-awS" secondAttribute="bottom" constant="23" id="rjE-6E-xRw"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hgq-jc-J1Z" secondAttribute="trailing" constant="16" id="u0s-Hf-vF5"/>
+                                            <constraint firstItem="Hgq-jc-J1Z" firstAttribute="leading" secondItem="L8t-rU-a42" secondAttribute="leading" constant="16" id="ueO-bN-LFm"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -98,7 +117,7 @@
                         <constraints>
                             <constraint firstItem="7t7-Sg-INu" firstAttribute="height" secondItem="cA6-JB-jfU" secondAttribute="height" priority="750" id="0CM-1U-UHH"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="YCo-e0-V2B" secondAttribute="trailing" id="0eQ-wS-Wv0"/>
-                            <constraint firstItem="7t7-Sg-INu" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" id="4rj-76-bZs"/>
+                            <constraint firstItem="7t7-Sg-INu" firstAttribute="top" secondItem="cA6-JB-jfU" secondAttribute="top" id="4rj-76-bZs"/>
                             <constraint firstItem="YCo-e0-V2B" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" id="A8x-mU-MSz"/>
                             <constraint firstItem="Gad-Ob-TOR" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" id="GjZ-DI-WvP"/>
                             <constraint firstItem="va1-Xt-fmq" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" id="K4a-II-uIe"/>
@@ -117,10 +136,16 @@
                     <connections>
                         <outlet property="cardImitateView" destination="va1-Xt-fmq" id="gjP-We-NaR"/>
                         <outlet property="cardView" destination="L8t-rU-a42" id="r1b-ys-77S"/>
+                        <outlet property="descriptionLabel" destination="JxR-eF-awS" id="beU-dA-ytj"/>
+                        <outlet property="descriptionToBottom" destination="4j8-WF-D2B" id="P9K-cY-32M"/>
+                        <outlet property="descriptionToGoButton" destination="hZv-0H-uUh" id="YKg-v0-LhZ"/>
+                        <outlet property="goButton" destination="Hgq-jc-J1Z" id="2D8-Rb-mK0"/>
                         <outlet property="imageView" destination="Gad-Ob-TOR" id="ObN-CT-V1A"/>
                         <outlet property="imageViewTopConstraint" destination="daU-eA-fvf" id="te8-Xo-u5S"/>
                         <outlet property="scrollView" destination="7t7-Sg-INu" id="DOj-Bj-vv9"/>
                         <outlet property="scrollViewTopConstraints" destination="4rj-76-bZs" id="oJZ-TD-Skc"/>
+                        <outlet property="subtitleLabel" destination="H1g-Mt-Cys" id="2Dw-8E-QEh"/>
+                        <outlet property="titleLabel" destination="lhD-AH-k22" id="8FW-nK-Xea"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,6 +155,6 @@
     </scenes>
     <resources>
         <image name="cancel_button" width="80" height="88"/>
-        <image name="one_love" width="375" height="307"/>
+        <image name="one_love" width="343.5" height="188"/>
     </resources>
 </document>
