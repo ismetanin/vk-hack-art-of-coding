@@ -58,6 +58,11 @@
                                             <constraint firstAttribute="width" constant="54" id="K4p-6L-l3N"/>
                                             <constraint firstAttribute="height" constant="54" id="N1a-oP-YYz"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="27"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавить в календарь" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="744-JH-vSo">
                                         <rect key="frame" x="86" y="128" width="194" height="22"/>
@@ -71,6 +76,11 @@
                                             <constraint firstAttribute="width" constant="54" id="ggv-eP-iUM"/>
                                             <constraint firstAttribute="height" constant="54" id="y1R-OM-XVZ"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="27"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поделиться в VK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mk-GK-42h">
                                         <rect key="frame" x="86" y="212" width="146" height="22"/>
@@ -78,12 +88,17 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XyN-99-GYW">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb" translatesAutoresizingMaskIntoConstraints="NO" id="XyN-99-GYW">
                                         <rect key="frame" x="16" y="280" width="54" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="JoB-RR-Hjy"/>
                                             <constraint firstAttribute="width" constant="54" id="PU8-cH-wxT"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="27"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поделиться в Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvq-tu-Ldg">
                                         <rect key="frame" x="86" y="296" width="203" height="22"/>
@@ -91,12 +106,17 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ciD-on-Lvm">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="ciD-on-Lvm">
                                         <rect key="frame" x="16" y="364" width="54" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="54" id="trH-cM-8qx"/>
                                             <constraint firstAttribute="height" constant="54" id="zaL-Bu-AAN"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="27"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поделиться в Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z83-HP-0nI">
                                         <rect key="frame" x="86" y="380" width="180" height="22"/>
@@ -104,22 +124,67 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5s7-ME-HvS">
+                                        <rect key="frame" x="16" y="112" width="54" height="54"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="Aa7-3i-gFB">
+                                                <rect key="frame" x="17.5" y="17.5" width="19" height="19"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.16862745098039217" green="0.22352941176470587" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="0vM-Dj-hP3"/>
+                                            <constraint firstItem="Aa7-3i-gFB" firstAttribute="centerX" secondItem="5s7-ME-HvS" secondAttribute="centerX" id="4Th-Vm-Nmg"/>
+                                            <constraint firstAttribute="leading" secondItem="5s7-ME-HvS" secondAttribute="leading" id="ALA-5C-Lvc"/>
+                                            <constraint firstItem="Aa7-3i-gFB" firstAttribute="centerY" secondItem="5s7-ME-HvS" secondAttribute="centerY" id="KKL-zN-mfX"/>
+                                            <constraint firstAttribute="height" constant="54" id="wbd-bv-T8C"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="27"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEs-P0-Dby">
+                                        <rect key="frame" x="16" y="196" width="54" height="54"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vk" translatesAutoresizingMaskIntoConstraints="NO" id="l9I-bB-3bz">
+                                                <rect key="frame" x="13.5" y="19.5" width="27" height="15"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.29411764705882354" green="0.46666666666666667" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="Al7-YN-eKT"/>
+                                            <constraint firstItem="l9I-bB-3bz" firstAttribute="centerX" secondItem="KEs-P0-Dby" secondAttribute="centerX" id="Qgy-F9-Uj7"/>
+                                            <constraint firstItem="l9I-bB-3bz" firstAttribute="centerY" secondItem="KEs-P0-Dby" secondAttribute="centerY" id="eTm-I7-aem"/>
+                                            <constraint firstAttribute="height" constant="54" id="mGw-mA-J3J"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="27"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="2Mk-GK-42h" firstAttribute="leading" secondItem="vVz-7c-qlF" secondAttribute="trailing" constant="16" id="2dz-Vl-eM4"/>
                                     <constraint firstAttribute="trailing" secondItem="Kdh-18-Yhe" secondAttribute="trailing" constant="40" id="4uU-Ap-Oj5"/>
                                     <constraint firstAttribute="bottom" secondItem="ciD-on-Lvm" secondAttribute="bottom" constant="36" id="6Qx-Fa-Vba"/>
+                                    <constraint firstItem="KEs-P0-Dby" firstAttribute="top" secondItem="5s7-ME-HvS" secondAttribute="bottom" constant="30" id="6mB-uW-LjY"/>
                                     <constraint firstItem="744-JH-vSo" firstAttribute="centerY" secondItem="fmw-U1-fkI" secondAttribute="centerY" id="BTg-dR-Nmt"/>
                                     <constraint firstItem="XyN-99-GYW" firstAttribute="top" secondItem="vVz-7c-qlF" secondAttribute="bottom" constant="30" id="CIX-es-HcT"/>
+                                    <constraint firstItem="5s7-ME-HvS" firstAttribute="top" secondItem="Kdh-18-Yhe" secondAttribute="bottom" constant="30.5" id="Efy-RY-HGf"/>
                                     <constraint firstItem="Kdh-18-Yhe" firstAttribute="top" secondItem="NbI-16-FD6" secondAttribute="top" constant="24" id="JRx-98-vIy"/>
                                     <constraint firstItem="Zvq-tu-Ldg" firstAttribute="centerY" secondItem="XyN-99-GYW" secondAttribute="centerY" id="LjE-IT-bvq"/>
                                     <constraint firstItem="ciD-on-Lvm" firstAttribute="top" secondItem="XyN-99-GYW" secondAttribute="bottom" constant="30" id="OzA-UW-UJa"/>
                                     <constraint firstItem="6kn-aW-GTC" firstAttribute="top" secondItem="881-BH-vom" secondAttribute="bottom" constant="-13" id="Q6Z-v9-1xg"/>
                                     <constraint firstItem="fmw-U1-fkI" firstAttribute="leading" secondItem="NbI-16-FD6" secondAttribute="leading" constant="16" id="QLh-qv-OpH"/>
                                     <constraint firstItem="744-JH-vSo" firstAttribute="leading" secondItem="fmw-U1-fkI" secondAttribute="trailing" constant="16" id="QkB-g8-cBE"/>
+                                    <constraint firstItem="KEs-P0-Dby" firstAttribute="leading" secondItem="NbI-16-FD6" secondAttribute="leading" constant="16" id="Tcy-Vv-7Sw"/>
                                     <constraint firstItem="vVz-7c-qlF" firstAttribute="leading" secondItem="NbI-16-FD6" secondAttribute="leading" constant="16" id="Tq5-p5-M4h"/>
                                     <constraint firstAttribute="trailing" secondItem="6kn-aW-GTC" secondAttribute="trailing" id="WU3-C5-aAd"/>
+                                    <constraint firstItem="5s7-ME-HvS" firstAttribute="leading" secondItem="NbI-16-FD6" secondAttribute="leading" constant="16" id="Yj2-Il-0fH"/>
                                     <constraint firstItem="XyN-99-GYW" firstAttribute="leading" secondItem="NbI-16-FD6" secondAttribute="leading" constant="16" id="YsV-gV-RJG"/>
                                     <constraint firstItem="6kn-aW-GTC" firstAttribute="top" secondItem="NbI-16-FD6" secondAttribute="top" constant="-20" id="aid-9B-b6I"/>
                                     <constraint firstItem="Z83-HP-0nI" firstAttribute="leading" secondItem="ciD-on-Lvm" secondAttribute="trailing" constant="16" id="ar0-aX-Dob"/>
@@ -149,4 +214,10 @@
             <point key="canvasLocation" x="573.60000000000002" y="-231.63418290854574"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar" width="19.5" height="19"/>
+        <image name="fb" width="54.5" height="54"/>
+        <image name="twitter" width="54.5" height="54"/>
+        <image name="vk" width="27" height="15.5"/>
+    </resources>
 </document>
