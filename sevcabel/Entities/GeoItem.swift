@@ -17,8 +17,9 @@ struct GeoItem: Codable {
     let altitude: Double
     let timestamp: Int
     let type: String
+    let urgency: Int
     
-    init(id: String, title: String, summary: String, latitude: Double, longitude: Double, altitude: Double, type: String) {
+    init(id: String, title: String, summary: String, latitude: Double, longitude: Double, altitude: Double, type: String, urgency: Int) {
         self.id = id
         self.title = title
         self.summary = summary
@@ -27,5 +28,6 @@ struct GeoItem: Codable {
         self.altitude = altitude
         self.timestamp = Int(Date().timeIntervalSince1970)
         self.type = type
+        self.urgency = urgency
     }
 }

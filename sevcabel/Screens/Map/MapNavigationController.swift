@@ -11,6 +11,7 @@ import UIKit
 class MapNavigationController: UINavigationController {
 
     private var childARMapViewController: UIViewController?
+    private var childARMapViewControllerIsPresented = false
 
     private let switcher = AttitudeSwitcher()
 
@@ -41,9 +42,11 @@ extension MapNavigationController {
             
             switch type {
             case .up:
-                self.showCam()
+                self.showAR()
             case .down:
-                self.showMap()
+                self.childARMapViewController?.dismiss(animated: true, completion: {
+                })
+                self.childARMapViewControllerIsPresented = false
             }
             
         }
@@ -58,11 +61,16 @@ extension MapNavigationController {
     }
     
     private func showMap() {
-        self.childARMapViewController?.view.alpha = 0.0
-        self.tabBarController?.hide(vc: childARMapViewController)
+        guard let childARVC = childARMapViewController, childARVC.isBeingPresented else {
+            return
+        }
+        
+        childARMapViewController?.dismiss(animated: true, completion: nil)
+        
+//        self.tabBarController?.hide(vc: childARMapViewController)
     }
     
-    private func showCam() {
+    private func showAR() {
         let arVC = { () -> UIViewController in
             if let arVC = self.childARMapViewController {
                 return arVC
@@ -70,7 +78,14 @@ extension MapNavigationController {
             return makeARVC()
         }()
         
-        self.tabBarController?.show(vc: arVC)
+        guard !childARMapViewControllerIsPresented else {
+            return
+        }
+        
+        childARMapViewControllerIsPresented = true
+        self.tabBarController?.present(arVC, animated: true, completion: nil)
+        
+//        self.tabBarController?.show(vc: arVC)
     }
 }
 

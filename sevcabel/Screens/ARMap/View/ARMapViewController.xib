@@ -102,14 +102,27 @@
                     <rect key="frame" x="62.5" y="417" width="250" height="250"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCt-DS-Urh">
+                    <rect key="frame" x="309" y="28" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="CfT-fR-kER"/>
+                    </constraints>
+                    <state key="normal" image="close"/>
+                    <connections>
+                        <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="plK-VM-SOf"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="5iD-af-HNw" firstAttribute="trailing" secondItem="eCt-DS-Urh" secondAttribute="trailing" constant="16" id="3CP-PL-vtT"/>
                 <constraint firstItem="eni-24-bQz" firstAttribute="top" secondItem="i43-Db-14O" secondAttribute="bottom" constant="12.5" id="I8N-Qm-Ski"/>
                 <constraint firstItem="i43-Db-14O" firstAttribute="trailing" secondItem="uDC-pc-d7u" secondAttribute="trailing" id="SiC-ez-EJj"/>
                 <constraint firstItem="5iD-af-HNw" firstAttribute="bottom" secondItem="uDC-pc-d7u" secondAttribute="bottom" constant="20" id="UCn-rQ-7yu"/>
                 <constraint firstItem="eni-24-bQz" firstAttribute="trailing" secondItem="uDC-pc-d7u" secondAttribute="trailing" id="axF-Za-IxT"/>
+                <constraint firstItem="eCt-DS-Urh" firstAttribute="top" secondItem="5iD-af-HNw" secondAttribute="top" constant="8" id="cOx-4G-CU7"/>
                 <constraint firstItem="5iD-af-HNw" firstAttribute="trailing" secondItem="uDC-pc-d7u" secondAttribute="trailing" constant="16" id="iLC-a1-DUa"/>
+                <constraint firstItem="eCt-DS-Urh" firstAttribute="width" secondItem="eCt-DS-Urh" secondAttribute="height" multiplier="1:1" id="ieA-ZR-6rj"/>
                 <constraint firstItem="uDC-pc-d7u" firstAttribute="top" secondItem="eni-24-bQz" secondAttribute="bottom" constant="8" id="okO-Kz-cMO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="5iD-af-HNw"/>
@@ -117,6 +130,7 @@
         </view>
     </objects>
     <resources>
-        <image name="mic" width="16" height="16"/>
+        <image name="close" width="40.5" height="40"/>
+        <image name="mic" width="50" height="50"/>
     </resources>
 </document>

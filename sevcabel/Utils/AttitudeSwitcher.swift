@@ -20,6 +20,10 @@ class AttitudeSwitcher {
     
     var switchHandler: ((SwitchType) -> ())?
     
+    func stop() {
+        manager.stopDeviceMotionUpdates()
+    }
+    
     func start() {
         guard manager.isDeviceMotionAvailable else {
             return

@@ -68,13 +68,17 @@ class ARMapViewController: UIViewController {
         }
     }
     
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     private func makeItemWith(text: String) {
         let annotationNode = TextCardNode(location: nil, title: text, summary: nil)
         annotationNode.scaleRelativeToDistance = false
         self.sceneLocationView?.addLocationNodeForCurrentPosition(locationNode: annotationNode)
         annotationNode.locationConfirmed = true
         
-        let geoItem = GeoItem(id: "\(Int(Date().timeIntervalSince1970))", title: text, summary: "", latitude: annotationNode.location.coordinate.latitude, longitude: annotationNode.location.coordinate.longitude, altitude:  annotationNode.location.altitude, type: "user")
+        let geoItem = GeoItem(id: "\(Int(Date().timeIntervalSince1970))", title: text, summary: "", latitude: annotationNode.location.coordinate.latitude, longitude: annotationNode.location.coordinate.longitude, altitude:  annotationNode.location.altitude, type: "user", urgency: 0)
         
         dbManager?.postItem(geoItem)
         
@@ -112,6 +116,8 @@ class ARMapViewController: UIViewController {
         sceneLocationView?.frame = view.bounds
         
         updateInfoLabelLayout()
+        mapToSmallView()
+
     }
     
     private func configureSpeechRecognition() {
@@ -136,21 +142,21 @@ class ARMapViewController: UIViewController {
         mapToSmallView()
     }
     
-    private func configureAttitudeSwitcher() {
-        
-        self.switcher.switchHandler = { type in
-            
-            switch type {
-            case .up:
-                self.mapToSmallView()
-            case .down:
-                self.mapToFullScreen()
-            }
-            
-        }
-        self.switcher.start()
-        
-    }
+//    private func configureAttitudeSwitcher() {
+//
+//        self.switcher.switchHandler = { type in
+//
+//            switch type {
+//            case .up:
+//                self.mapToSmallView()
+//            case .down:
+//                self.mapToFullScreen()
+//            }
+//
+//        }
+//        self.switcher.start()
+//
+//    }
     
     private func mapToSmallView() {
         
@@ -176,7 +182,7 @@ class ARMapViewController: UIViewController {
         
         self.dbManager?.itemsUpdate = { items in
             for item in items {
-                let node = self.buildNode(latitude: item.latitude, longitude: item.longitude, altitude: item.altitude, imageName: "", title: item.title, summary: item.summary)
+                let node = self.buildNode(latitude: item.latitude, longitude: item.longitude, altitude: item.altitude, imageName: "", title: item.title, summary: item.summary, urgencyLevel: item.urgency)
                 node.scaleRelativeToDistance = false
                 
                 let annotation = MKPointAnnotation()
@@ -345,13 +351,34 @@ extension ARMapViewController: SceneLocationViewDelegate {
 // MARK: - Data Helpers
 
 private extension ARMapViewController {
-    func buildNode(latitude: CLLocationDegrees, longitude: CLLocationDegrees, altitude: CLLocationDistance, imageName: String, title: String, summary: String) -> TextCardNode {
+    func buildNode(latitude: CLLocationDegrees, longitude: CLLocationDegrees, altitude: CLLocationDistance, imageName: String, title: String, summary: String, urgencyLevel: Int) -> TextCardNode {
         let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         let location = CLLocation(coordinate: coordinate, altitude: altitude)
         
-        let resultNode = TextCardNode(location: location, title: title, summary: summary)
+        let resultNode = TextCardNode(location: location, title: title, summary: summary, urgencyLevel: urgencyLevel)
         //        let resultNode = LocationAnnotationNode(location: location, image: image)
         resultNode.scaleRelativeToDistance = false
         return resultNode
+    }
+}
+
+// MARK: - Switcher
+
+extension ARMapViewController {
+    private func configureAttitudeSwitcher() {
+        
+        self.switcher.switchHandler = { type in
+            
+            switch type {
+            case .up:
+                return
+            case .down:
+                self.switcher.stop()
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+        }
+        self.switcher.start()
+        
     }
 }
