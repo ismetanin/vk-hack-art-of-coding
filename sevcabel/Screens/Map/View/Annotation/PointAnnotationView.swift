@@ -22,6 +22,10 @@ final class PointAnnotationView: MGLAnnotationView {
 
     private let image: UIImage?
 
+    // MARK: - Properties
+
+    var didTap: (() -> ())?
+
     // MARK: - Initialization and deinitialization
 
     init(image: UIImage?) {
@@ -48,5 +52,15 @@ final class PointAnnotationView: MGLAnnotationView {
         pulse.backgroundColor = Constants.pulseColor.cgColor
 
         layer.insertSublayer(pulse, below: imageView.layer)
+
+        isUserInteractionEnabled = true
+
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapAction))
+        addGestureRecognizer(tapGestureRecognizer)
+    }
+
+    @objc
+    private func tapAction() {
+        didTap?()
     }
 }

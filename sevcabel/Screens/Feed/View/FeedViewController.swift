@@ -63,7 +63,7 @@ final class FeedViewController: UIViewController {
                 Код действителен на первые 50 активаций👇
                 """,
                      isEvent: true,
-                     isRegistered: false
+                     isRegistered: true
             ),
             FeedItem(title: "One Love Fest",
                      subtitle: "Со 2 по 3 января",
@@ -81,7 +81,7 @@ final class FeedViewController: UIViewController {
                     One Love Fest — альтернативный ответ на вопрос, над которым бьются лучшие умы человечества, «чем заняться в новогодние каникулы?». 💕
                     """,
                      isEvent: true,
-                     isRegistered: false
+                     isRegistered: true
             )
         ]
 

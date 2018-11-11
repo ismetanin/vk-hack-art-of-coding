@@ -254,13 +254,18 @@ extension MapViewController: MGLMapViewDelegate {
         if ((annotation as? PointAnnotation)?.isPulsing ?? false) {
             var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "some")
             if annotationView == nil {
-                annotationView = PointAnnotationView(image: (annotation as? PointAnnotation)?.pulsingImage)
+                let pointAnnotationView = PointAnnotationView(image: (annotation as? PointAnnotation)?.pulsingImage)
+
+                pointAnnotationView.didTap = {
+                    mapView.selectAnnotation(annotation, animated: true)
+                }
+
+                annotationView = pointAnnotationView
             }
 
             return annotationView
         } else if annotation is MGLUserLocation {
             let annotationView = MGLUserLocationAnnotationView()
-            annotationView.tintColor = .red
             return annotationView
         } else {
             return nil
@@ -274,5 +279,9 @@ extension MapViewController: MGLMapViewDelegate {
 
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         return true
+    }
+
+    func mapView(_ mapView: MGLMapView, tapOnCalloutFor annotation: MGLAnnotation) {
+        mapView.deselectAnnotation(annotation, animated: true)
     }
 }

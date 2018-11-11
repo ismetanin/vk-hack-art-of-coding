@@ -28,7 +28,10 @@ final class FeedItemDetailViewController: UIViewController {
     }
     @IBAction func goAction(_ sender: Any) {
         if goButton.titleLabel?.text == "Я пойду" {
-
+            let controller = SuccessfullyRegisteredViewController.fromStoryboard()
+            controller.modalPresentationStyle = .overFullScreen
+            controller.transitioningDelegate = self.transition
+            self.present(controller, animated: true, completion: nil)
         } else {
             let controller = IdentifierViewController.fromStoryboard() as! IdentifierViewController
             controller.configureForTicket()
