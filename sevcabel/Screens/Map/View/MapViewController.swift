@@ -157,6 +157,11 @@ final class MapViewController: UIViewController {
         let fifteenthCoordinate = CLLocationCoordinate2D(latitude: 59.924389, longitude: 30.241543)
         let fifteenthAnnotation = PointAnnotation(type: .shop, coordinate: fifteenthCoordinate)
         mapView?.addAnnotation(fifteenthAnnotation)
+
+        let redCoordinate = CLLocationCoordinate2D(latitude: 59.923631, longitude: 30.242258)
+        let redAnnotation = PointAnnotation(type: .star, coordinate: redCoordinate)
+        redAnnotation.isPulsing = true
+        mapView?.addAnnotation(redAnnotation)
     }
 }
 
@@ -188,8 +193,12 @@ extension MapViewController: MGLMapViewDelegate {
     }
 
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
-        if annotation is PointAnnotation {
-            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "some")
+        if ((annotation as? PointAnnotation)?.isPulsing ?? false) {
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "some")
+            if annotationView == nil {
+                annotationView = PointAnnotationView(image: (annotation as? PointAnnotation)?.pulsingImage)
+            }
+
             return annotationView
         } else if annotation is MGLUserLocation {
             let annotationView = MGLUserLocationAnnotationView()
@@ -201,6 +210,11 @@ extension MapViewController: MGLMapViewDelegate {
     }
 
     func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
-        return (annotation as? PointAnnotation)?.image
+        guard let annotation = annotation as? PointAnnotation else { return nil }
+        return annotation.isPulsing ? nil : annotation.image
+    }
+
+    func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+        return true
     }
 }

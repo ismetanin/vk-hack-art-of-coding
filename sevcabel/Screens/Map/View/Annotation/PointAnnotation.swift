@@ -21,6 +21,11 @@ final class PointAnnotation: MGLPointAnnotation {
         case child
         case coffee
         case shop
+        case star
+    }
+
+    private enum Constants {
+        static let pulse = "pulse-"
     }
 
     // MARK: - Constants
@@ -33,6 +38,12 @@ final class PointAnnotation: MGLPointAnnotation {
         return MGLAnnotationImage(image: UIImage(named: type.rawValue) ?? UIImage(),
                                   reuseIdentifier: type.rawValue)
     }
+
+    var pulsingImage: UIImage? {
+        return UIImage(named: Constants.pulse + type.rawValue)
+    }
+
+    var isPulsing = false
 
     // MARK: - Initialization and deinitialization
 

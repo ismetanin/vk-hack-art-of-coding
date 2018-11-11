@@ -19,6 +19,8 @@
 		87A2A2F1176B4B640E51F9E7 /* AuthorizationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BE5821EF9B2F374116E894 /* AuthorizationViewController.storyboard */; };
 		8933A0662197ACCC00935313 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933A0652197ACCC00935313 /* PointAnnotation.swift */; };
 		89A564EF2197D1A500DD27D9 /* Zoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A564EE2197D1A500DD27D9 /* Zoom.swift */; };
+		89A564F82197F68700DD27D9 /* PointAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A564F72197F68700DD27D9 /* PointAnnotationView.swift */; };
+		89A564FA2197FA1F00DD27D9 /* PulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A564F92197FA1F00DD27D9 /* PulseLayer.swift */; };
 		8B1B0E332195F42900735BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B0E322195F42900735BC7 /* AppDelegate.swift */; };
 		8B1B0E3A2195F42B00735BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B0E392195F42B00735BC7 /* Assets.xcassets */; };
 		8B1B0E3D2195F42B00735BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B0E3B2195F42B00735BC7 /* LaunchScreen.storyboard */; };
@@ -75,6 +77,8 @@
 		87D31F1BD2186269F58788A7 /* FeedItemDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedItemDetailViewController.swift; sourceTree = "<group>"; };
 		8933A0652197ACCC00935313 /* PointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
 		89A564EE2197D1A500DD27D9 /* Zoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zoom.swift; sourceTree = "<group>"; };
+		89A564F72197F68700DD27D9 /* PointAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotationView.swift; sourceTree = "<group>"; };
+		89A564F92197FA1F00DD27D9 /* PulseLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseLayer.swift; sourceTree = "<group>"; };
 		8B1B0E2F2195F42900735BC7 /* sevcabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sevcabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1B0E322195F42900735BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B1B0E392195F42B00735BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				8933A0652197ACCC00935313 /* PointAnnotation.swift */,
+				89A564F72197F68700DD27D9 /* PointAnnotationView.swift */,
 			);
 			path = Annotation;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				89A564EE2197D1A500DD27D9 /* Zoom.swift */,
+				89A564F92197FA1F00DD27D9 /* PulseLayer.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -635,12 +641,14 @@
 				8933A0662197ACCC00935313 /* PointAnnotation.swift in Sources */,
 				630EF828B67AB9E8B2B45FC2 /* FeedViewController.swift in Sources */,
 				8BA619FF21963DE600375CD9 /* FeedBlockViewController.swift in Sources */,
+				89A564FA2197FA1F00DD27D9 /* PulseLayer.swift in Sources */,
 				8BA619FD21963B8D00375CD9 /* NSObject.swift in Sources */,
 				89A564EF2197D1A500DD27D9 /* Zoom.swift in Sources */,
 				8B60419A2197460A004BBBA8 /* NSNotification.Name.swift in Sources */,
 				8B60419C219747DE004BBBA8 /* UserDefaults.swift in Sources */,
 				8B8730802197A0BF0059D4EA /* DrawerDismissTransition.swift in Sources */,
 				8BA619F3219639CC00375CD9 /* FeedItem.swift in Sources */,
+				89A564F82197F68700DD27D9 /* PointAnnotationView.swift in Sources */,
 				8B8730822197A0D90059D4EA /* DrawerPresentTransition.swift in Sources */,
 				8B87307B219791920059D4EA /* UIImageView.swift in Sources */,
 				8BA619E92196244500375CD9 /* UIViewController.swift in Sources */,
