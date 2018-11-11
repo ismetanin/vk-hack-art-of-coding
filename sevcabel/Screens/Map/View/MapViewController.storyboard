@@ -17,7 +17,41 @@
                     <view key="view" contentMode="scaleToFill" id="cA6-JB-jfU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVr-Wp-SQb">
+                                <rect key="frame" x="295" y="261.5" width="88" height="58"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="-20"/>
+                                <state key="normal" image="plus"/>
+                                <connections>
+                                    <action selector="zoomInButtonAction:" destination="h3k-bK-TNO" eventType="touchUpInside" id="PHe-iA-raE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40d-vT-8fM">
+                                <rect key="frame" x="295" y="319.5" width="88" height="48"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="-20"/>
+                                <state key="normal" image="minus"/>
+                                <connections>
+                                    <action selector="zoomOutButtonAction:" destination="h3k-bK-TNO" eventType="touchUpInside" id="rRp-7g-10M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdJ-BB-AfY">
+                                <rect key="frame" x="295" y="367.5" width="88" height="68"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="location"/>
+                                <connections>
+                                    <action selector="locatePositionButtonAction:" destination="h3k-bK-TNO" eventType="touchUpInside" id="3yw-RG-LLm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="40d-vT-8fM" firstAttribute="top" secondItem="VVr-Wp-SQb" secondAttribute="bottom" id="61Z-OV-rxX"/>
+                            <constraint firstItem="tdJ-BB-AfY" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="8" id="NIb-pF-XsO"/>
+                            <constraint firstItem="tdJ-BB-AfY" firstAttribute="top" secondItem="40d-vT-8fM" secondAttribute="bottom" id="QH0-H7-Vsh"/>
+                            <constraint firstItem="40d-vT-8fM" firstAttribute="centerY" secondItem="YWU-9O-L7t" secondAttribute="centerY" id="TXb-xl-ODb"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="VVr-Wp-SQb" secondAttribute="trailing" constant="-8" id="aFi-I3-MgR"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="40d-vT-8fM" secondAttribute="trailing" constant="-8" id="nyB-ZA-9aL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/dark-v9"/>
@@ -30,4 +64,9 @@
             <point key="canvasLocation" x="1512.8" y="-231.63418290854574"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="location" width="88.5" height="88.5"/>
+        <image name="minus" width="88.5" height="88.5"/>
+        <image name="plus" width="88.5" height="88.5"/>
+    </resources>
 </document>

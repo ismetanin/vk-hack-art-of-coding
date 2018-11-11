@@ -19,6 +19,7 @@
 		87A2A2F1176B4B640E51F9E7 /* AuthorizationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BE5821EF9B2F374116E894 /* AuthorizationViewController.storyboard */; };
 		8933A0642196E7D000935313 /* MapNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933A0632196E7D000935313 /* MapNavigationController.swift */; };
 		8933A0662197ACCC00935313 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933A0652197ACCC00935313 /* PointAnnotation.swift */; };
+		89A564EF2197D1A500DD27D9 /* Zoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A564EE2197D1A500DD27D9 /* Zoom.swift */; };
 		8B1B0E332195F42900735BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B0E322195F42900735BC7 /* AppDelegate.swift */; };
 		8B1B0E3A2195F42B00735BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B0E392195F42B00735BC7 /* Assets.xcassets */; };
 		8B1B0E3D2195F42B00735BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B0E3B2195F42B00735BC7 /* LaunchScreen.storyboard */; };
@@ -75,6 +76,7 @@
 		87D31F1BD2186269F58788A7 /* FeedItemDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedItemDetailViewController.swift; sourceTree = "<group>"; };
 		8933A0632196E7D000935313 /* MapNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavigationController.swift; sourceTree = "<group>"; };
 		8933A0652197ACCC00935313 /* PointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
+		89A564EE2197D1A500DD27D9 /* Zoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zoom.swift; sourceTree = "<group>"; };
 		8B1B0E2F2195F42900735BC7 /* sevcabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sevcabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1B0E322195F42900735BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B1B0E392195F42B00735BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		6E8867A34CE2BC02C22FB157 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				89A564F02197D1A900DD27D9 /* Helper */,
 				8933A0672197ACD000935313 /* Annotation */,
 				BFF1F064516FD97D30FB9D40 /* MapViewController.swift */,
 				4A89BD8794D299ED698DE5C4 /* MapViewController.storyboard */,
@@ -215,6 +218,14 @@
 				8933A0652197ACCC00935313 /* PointAnnotation.swift */,
 			);
 			path = Annotation;
+			sourceTree = "<group>";
+		};
+		89A564F02197D1A900DD27D9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				89A564EE2197D1A500DD27D9 /* Zoom.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		8B1B0E262195F42900735BC7 = {
@@ -629,6 +640,7 @@
 				8BA619FF21963DE600375CD9 /* FeedBlockViewController.swift in Sources */,
 				8BA619FD21963B8D00375CD9 /* NSObject.swift in Sources */,
 				8933A0642196E7D000935313 /* MapNavigationController.swift in Sources */,
+				89A564EF2197D1A500DD27D9 /* Zoom.swift in Sources */,
 				8B60419A2197460A004BBBA8 /* NSNotification.Name.swift in Sources */,
 				8B60419C219747DE004BBBA8 /* UserDefaults.swift in Sources */,
 				8B8730802197A0BF0059D4EA /* DrawerDismissTransition.swift in Sources */,

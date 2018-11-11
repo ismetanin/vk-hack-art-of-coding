@@ -12,6 +12,28 @@ import CoreLocation
 
 final class MapViewController: UIViewController {
 
+    // MARK: - IBActions
+
+    @IBAction func zoomInButtonAction(_ sender: Any) {
+        zoomLevel = Zoom.change(level: zoomLevel, step: -Constants.zoomStep)
+        mapView?.setCenter(Constants.center,
+                           zoomLevel: Zoom.to(level: zoomLevel),
+                           animated: true)
+    }
+
+    @IBAction func zoomOutButtonAction(_ sender: Any) {
+        zoomLevel = Zoom.change(level: zoomLevel, step: Constants.zoomStep)
+        mapView?.setCenter(Constants.center,
+                           zoomLevel: Zoom.to(level: zoomLevel),
+                           animated: true)
+    }
+    
+    @IBAction func locatePositionButtonAction(_ sender: Any) {
+        mapView?.setCenter(Constants.center,
+                           zoomLevel: Zoom.to(level: 1),
+                           animated: true)
+    }
+    
     // MARK: - Enums
 
     private enum Constants {
@@ -19,7 +41,6 @@ final class MapViewController: UIViewController {
         static let titleFontSize: CGFloat = 24.0
         static let titleColor = UIColor(red: 0.22, green: 0.23, blue: 0.28, alpha: 1.0)
         static let center = CLLocationCoordinate2D(latitude: 59.924303, longitude: 30.241221)
-        static let zoomLevel = 15.8
         static let mapStyleURL = URL(string: "mapbox://styles/drxlx/cjobudxet2k6c2st8tv26vw49")
         static let topLeft = CLLocationCoordinate2D(latitude: 59.925371, longitude: 30.238593)
         static let topRight = CLLocationCoordinate2D(latitude: 59.925398, longitude: 30.243716)
@@ -30,6 +51,7 @@ final class MapViewController: UIViewController {
         static let imageName = "map"
         static let layerID = "layer"
         static let mapTintColor = UIColor(red: 0.17, green: 0.22, blue: 0.56, alpha: 1.0)
+        static let zoomStep = 1
     }
 
     // MARK: - Constants
@@ -38,7 +60,8 @@ final class MapViewController: UIViewController {
 
     // MARK: - Properties
 
-    var mapView: MGLMapView?
+    private var mapView: MGLMapView?
+    private var zoomLevel = 1.0
 
     // MARK: - UIViewController
 
@@ -72,14 +95,16 @@ final class MapViewController: UIViewController {
     private func configureMapView() {
         let mapView = MGLMapView(frame: view.bounds)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView.setCenter(Constants.center, zoomLevel: Constants.zoomLevel, animated: false)
+        mapView.setCenter(Constants.center,
+                          zoomLevel: Zoom.to(level: zoomLevel),
+                          animated: false)
         mapView.showsUserLocation = true
         mapView.showsUserHeadingIndicator = true
         mapView.tintColor = Constants.mapTintColor
         mapView.styleURL = Constants.mapStyleURL
         mapView.attributionButton.alpha = 0.0
         mapView.delegate = self
-        view.addSubview(mapView)
+        view.insertSubview(mapView, at: 0)
 
         self.mapView = mapView
     }
