@@ -14,7 +14,7 @@ import ARCL
 
 extension UIView {
     func image() -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, 0.0)
+        UIGraphicsBeginImageContextWithOptions(self.bounds.insetBy(dx: -5.0, dy: -5.0).size, false, 0.0)
         defer { UIGraphicsEndImageContext() }
         if let context = UIGraphicsGetCurrentContext() {
             self.layer.render(in: context)
@@ -40,7 +40,7 @@ open class TextCardNode: LocationAnnotationNode {
     
     public let summary: String
     
-    public init(location: CLLocation?, title: String, summary: String?) {
+    public init(location: CLLocation?, title: String, summary: String?, urgencyLevel: Int = 0) {
         
         self.title = title
         self.summary = summary ?? ""
@@ -53,7 +53,16 @@ open class TextCardNode: LocationAnnotationNode {
         let resultHeight = titleHeight + summaryHeight + verticalSpacing
 
         let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: resultWidth, height: resultHeight))
-        view.backgroundColor = #colorLiteral(red: 0.807843148708344, green: 0.0274509806185961, blue: 0.333333343267441, alpha: 1.0)
+        
+        let color = { () -> UIColor in
+            switch urgencyLevel {
+            case 1: return UIColor(red: 0.17, green: 0.22, blue: 0.56, alpha: 1)
+            case 2: return UIColor(red: 0.98, green: 0.1, blue: 0.37, alpha: 1)
+            default: return UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+            }
+        }()
+        
+        view.backgroundColor = color
         view.layer.cornerRadius = 10.0
         
         let titleLabel = UILabel(frame: CGRect(x: 10.0, y: 8.0, width: textWidth, height: titleHeight))
@@ -74,6 +83,11 @@ open class TextCardNode: LocationAnnotationNode {
         
         view.addSubview(titleLabel)
         view.addSubview(summaryLabel)
+        
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOffset = CGSize(width: 0.5, height: 4.0)
+        view.layer.shadowOpacity = 0.5
+        view.layer.shadowRadius = 5.0
         
         let image = view.image()
         
