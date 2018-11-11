@@ -18,6 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что происходит" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5z-WY-H30">
+                                <rect key="frame" x="16" y="44" width="220.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" red="0.22352941176470587" green="0.23137254901960785" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVr-Wp-SQb">
                                 <rect key="frame" x="295" y="261.5" width="88" height="58"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="-20"/>
@@ -50,7 +56,9 @@
                             <constraint firstItem="tdJ-BB-AfY" firstAttribute="top" secondItem="40d-vT-8fM" secondAttribute="bottom" id="QH0-H7-Vsh"/>
                             <constraint firstItem="40d-vT-8fM" firstAttribute="centerY" secondItem="YWU-9O-L7t" secondAttribute="centerY" id="TXb-xl-ODb"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="VVr-Wp-SQb" secondAttribute="trailing" constant="-8" id="aFi-I3-MgR"/>
+                            <constraint firstItem="A5z-WY-H30" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="16" id="l4g-zB-uHT"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="40d-vT-8fM" secondAttribute="trailing" constant="-8" id="nyB-ZA-9aL"/>
+                            <constraint firstItem="A5z-WY-H30" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="24" id="ywG-Yd-t16"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
                         <userDefinedRuntimeAttributes>

@@ -37,9 +37,6 @@ final class MapViewController: UIViewController {
     // MARK: - Enums
 
     private enum Constants {
-        static let title = "Что происходит"
-        static let titleFontSize: CGFloat = 24.0
-        static let titleColor = UIColor(red: 0.22, green: 0.23, blue: 0.28, alpha: 1.0)
         static let center = CLLocationCoordinate2D(latitude: 59.924303, longitude: 30.241221)
         static let mapStyleURL = URL(string: "mapbox://styles/drxlx/cjobudxet2k6c2st8tv26vw49")
         static let topLeft = CLLocationCoordinate2D(latitude: 59.925371, longitude: 30.238593)
@@ -73,23 +70,9 @@ final class MapViewController: UIViewController {
     // MARK: - Private helpers
 
     private func setupInitialState() {
-        configureNavigationBar()
         configureMapView()
         useLocation()
         addAnnotations()
-    }
-
-    private func configureNavigationBar() {
-        navigationItem.title = nil
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: Constants.title,
-                                                           style: .plain,
-                                                           target: nil,
-                                                           action: nil)
-        let font = UIFont.boldSystemFont(ofSize: Constants.titleFontSize)
-        let attributes = [NSAttributedString.Key.font: font,
-                          NSAttributedString.Key.foregroundColor: Constants.titleColor]
-        navigationItem.leftBarButtonItem?.setTitleTextAttributes(attributes,
-                                                                 for: .normal)
     }
 
     private func configureMapView() {
