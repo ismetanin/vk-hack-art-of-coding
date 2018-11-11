@@ -17,11 +17,13 @@
 		31A607592197ADB6008F49C1 /* AppleSpeechKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A607582197ADB6008F49C1 /* AppleSpeechKitManager.swift */; };
 		31A6075B2197ADCC008F49C1 /* TextCardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6075A2197ADCC008F49C1 /* TextCardNode.swift */; };
 		31A6075D2197B256008F49C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31A6075C2197B255008F49C1 /* GoogleService-Info.plist */; };
+		39CD81B5137FA2A3EC8BF592 /* SuccessfullyRegisteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6312BE3A18C97F732B1F913 /* SuccessfullyRegisteredViewController.swift */; };
 		3C10679FD4927776F1066544 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1F064516FD97D30FB9D40 /* MapViewController.swift */; };
 		4C603563BE504E65FFAAE7B9 /* Pods_sevcabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E349266AC8083161E0C3060 /* Pods_sevcabel.framework */; };
 		5E775AD8EE9F6FD9C5B37FD5 /* IdentifierViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E135AE2FC43607F203526F /* IdentifierViewController.storyboard */; };
 		610EDEBA741623156B12B33E /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA41C1F88FBA909723CB39C /* FeedViewController.storyboard */; };
 		630EF828B67AB9E8B2B45FC2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41184B5D3F30845B8BA30F /* FeedViewController.swift */; };
+		64BDE621D4A428599F1CB125 /* SuccessfullyRegisteredViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68DF6BCD371BB4E86EAC9183 /* SuccessfullyRegisteredViewController.storyboard */; };
 		72F9E9A070F890E336940BE6 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F5A3B4DC2B8F1A35A819B3 /* ProfileViewController.storyboard */; };
 		779D645539E44978933BAE5C /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A89BD8794D299ED698DE5C4 /* MapViewController.storyboard */; };
 		87A2A2F1176B4B640E51F9E7 /* AuthorizationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BE5821EF9B2F374116E894 /* AuthorizationViewController.storyboard */; };
@@ -90,6 +92,7 @@
 		4A1E92A03C850F26CE380563 /* FeedItemDetailViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = FeedItemDetailViewController.storyboard; sourceTree = "<group>"; };
 		4A89BD8794D299ED698DE5C4 /* MapViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		5A41184B5D3F30845B8BA30F /* FeedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		68DF6BCD371BB4E86EAC9183 /* SuccessfullyRegisteredViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = SuccessfullyRegisteredViewController.storyboard; sourceTree = "<group>"; };
 		6B3FF405944B1D96F0841A7D /* ProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		73234F0192126586EBE6F28E /* Pods-sevcabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sevcabel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sevcabel/Pods-sevcabel.debug.xcconfig"; sourceTree = "<group>"; };
 		87D31F1BD2186269F58788A7 /* FeedItemDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedItemDetailViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 		D1080304847A3B28D57B7E7D /* AuthorizationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		E753788EAD2468C36601D426 /* Pods-sevcabelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sevcabelTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sevcabelTests/Pods-sevcabelTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EEA41C1F88FBA909723CB39C /* FeedViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
+		F6312BE3A18C97F732B1F913 /* SuccessfullyRegisteredViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SuccessfullyRegisteredViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,7 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				CF627A577143568F419F6A5A /* View */,
-				8B87307E2197A07E0059D4EA /* DrawerTransition */,
 			);
 			path = Identifier;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				EB89B249BF39576AA8A23C13 /* Profile */,
 				8BA61A0621964D9000375CD9 /* TabBar.swift */,
 				788D9FE3BAA23E14668EE360 /* Identifier */,
+				D569754D796260A9AED5E799 /* SuccessfullyRegistered */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -405,6 +409,7 @@
 		8BA61A0021964BD600375CD9 /* Reuse */ = {
 			isa = PBXGroup;
 			children = (
+				8B87307E2197A07E0059D4EA /* DrawerTransition */,
 				8BA619ED2196303D00375CD9 /* Pager.swift */,
 				8BA619EB2196267A00375CD9 /* Switch.swift */,
 				8BA61A0221964BEC00375CD9 /* Feed */,
@@ -476,6 +481,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C31F260F3B3586A1FE8D6CED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6312BE3A18C97F732B1F913 /* SuccessfullyRegisteredViewController.swift */,
+				68DF6BCD371BB4E86EAC9183 /* SuccessfullyRegisteredViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CF627A577143568F419F6A5A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +497,14 @@
 				24E135AE2FC43607F203526F /* IdentifierViewController.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D569754D796260A9AED5E799 /* SuccessfullyRegistered */ = {
+			isa = PBXGroup;
+			children = (
+				C31F260F3B3586A1FE8D6CED /* View */,
+			);
+			path = SuccessfullyRegistered;
 			sourceTree = "<group>";
 		};
 		EB89B249BF39576AA8A23C13 /* Profile */ = {
@@ -589,6 +611,7 @@
 				31A607542197AD43008F49C1 /* ARMapViewController.xib in Resources */,
 				C28834B521A1532E2DDF8683 /* FeedItemDetailViewController.storyboard in Resources */,
 				5E775AD8EE9F6FD9C5B37FD5 /* IdentifierViewController.storyboard in Resources */,
+				64BDE621D4A428599F1CB125 /* SuccessfullyRegisteredViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,6 +757,7 @@
 				89A564FE2198179900DD27D9 /* MapNavigationController.swift in Sources */,
 				96E14A9B4D6A602932EC813C /* IdentifierViewController.swift in Sources */,
 				8B87307D2197A0750059D4EA /* DrawerCustomTransitionDelegate.swift in Sources */,
+				39CD81B5137FA2A3EC8BF592 /* SuccessfullyRegisteredViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

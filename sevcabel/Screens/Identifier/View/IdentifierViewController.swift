@@ -45,7 +45,8 @@ final class IdentifierViewController: UIViewController {
 
     // MARK: - Private methods
 
-    @objc private func contentTap() {
+    @objc
+    private func contentTap() {
         dismiss(animated: true, completion: nil)
     }
 
