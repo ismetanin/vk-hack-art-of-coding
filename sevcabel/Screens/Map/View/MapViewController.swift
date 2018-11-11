@@ -29,6 +29,7 @@ final class MapViewController: UIViewController {
                                                        longitude: 30.238486)
         static let imageName = "map"
         static let layerID = "layer"
+        static let mapTintColor = UIColor(red: 0.17, green: 0.22, blue: 0.56, alpha: 1.0)
     }
 
     // MARK: - Constants
@@ -73,6 +74,8 @@ final class MapViewController: UIViewController {
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.setCenter(Constants.center, zoomLevel: Constants.zoomLevel, animated: false)
         mapView.showsUserLocation = true
+        mapView.showsUserHeadingIndicator = true
+        mapView.tintColor = Constants.mapTintColor
         mapView.styleURL = Constants.mapStyleURL
         mapView.attributionButton.alpha = 0.0
         mapView.delegate = self
@@ -177,8 +180,16 @@ extension MapViewController: MGLMapViewDelegate {
     }
 
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
-        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "some")
-        return annotationView
+        if annotation is PointAnnotation {
+            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "some")
+            return annotationView
+        } else if annotation is MGLUserLocation {
+            let annotationView = MGLUserLocationAnnotationView()
+            annotationView.tintColor = .red
+            return annotationView
+        } else {
+            return nil
+        }
     }
 
     func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
