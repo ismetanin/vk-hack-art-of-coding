@@ -59,5 +59,11 @@
 	<string>Для использования приложения необходимо включить геопозицию</string>
 	<key>MGLMapboxAccessToken</key>
 	<string>pk.eyJ1IjoiZHJ4bHgiLCJhIjoiY2pvYmM1a2UxMWs4YjNxb2RqMGRnOWU5eCJ9.WNEJBPPVulSZsQ8doCPjpw</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This application will use the camera for Augmented Reality.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>This application will use speech for Augmented Reality.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This application will use microphone for Augmented Reality.</string>
 </dict>
 </plist>
