@@ -9,6 +9,12 @@ target 'sevcabel' do
 	pod 'VK-ios-sdk'
 	pod 'SwiftyVK'
 	pod 'Nuke'
+    
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'CodableFirebase'
+    
+    pod 'ARCL'
 
   target 'sevcabelTests' do
     inherit! :search_paths

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ARMapViewController" customModule="sevcabel" customModuleProvider="target">
+            <connections>
+                <outlet property="createButton" destination="uDC-pc-d7u" id="JZ4-Yf-rWi"/>
+                <outlet property="mapView" destination="LeM-Fw-QXw" id="9sN-Gz-jbP"/>
+                <outlet property="realtimeLabel" destination="eni-24-bQz" id="BVf-Bu-5DC"/>
+                <outlet property="view" destination="Rbl-hB-Zrf" id="5SJ-t2-DjZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Rbl-hB-Zrf">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDC-pc-d7u">
+                    <rect key="frame" x="309" y="597" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="uDC-pc-d7u" secondAttribute="height" multiplier="1:1" id="hRe-19-FOr"/>
+                        <constraint firstAttribute="height" constant="50" id="p24-PA-NHx"/>
+                    </constraints>
+                    <state key="normal" image="mic"/>
+                    <connections>
+                        <action selector="endTouch:" destination="-1" eventType="touchCancel" id="cdX-zz-QPn"/>
+                        <action selector="endTouch:" destination="-1" eventType="touchUpOutside" id="fRN-4l-giX"/>
+                        <action selector="endTouch:" destination="-1" eventType="touchUpInside" id="lkh-zr-Kfn"/>
+                        <action selector="startTouch:" destination="-1" eventType="touchDown" id="9c7-Hy-6ZT"/>
+                    </connections>
+                </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eni-24-bQz">
+                    <rect key="frame" x="320" y="568.5" width="39" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i43-Db-14O">
+                    <rect key="frame" x="325" y="316" width="34" height="240"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKt-Kn-8t0">
+                            <rect key="frame" x="0.0" y="192" width="34" height="48"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <state key="normal" title="👍"/>
+                            <connections>
+                                <action selector="reactionPressed:" destination="-1" eventType="touchUpInside" id="vwd-6m-WoN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eec-wh-Sup">
+                            <rect key="frame" x="0.0" y="144" width="34" height="48"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <state key="normal" title="🔥"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAj-0Z-ERX">
+                            <rect key="frame" x="0.0" y="96" width="34" height="48"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <state key="normal" title="⭐️"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wy-dT-WJa">
+                            <rect key="frame" x="0.0" y="48" width="34" height="48"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <state key="normal" title="😡"/>
+                            <connections>
+                                <action selector="reactionPressed:" destination="-1" eventType="touchUpInside" id="lfM-YE-RuM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nui-Zf-GRw">
+                            <rect key="frame" x="0.0" y="0.0" width="34" height="48"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <state key="normal" title="💩"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Eec-wh-Sup" secondAttribute="trailing" id="0Eg-La-3vY"/>
+                        <constraint firstItem="4Wy-dT-WJa" firstAttribute="leading" secondItem="i43-Db-14O" secondAttribute="leading" id="0PY-2h-yRo"/>
+                        <constraint firstItem="Nui-Zf-GRw" firstAttribute="leading" secondItem="i43-Db-14O" secondAttribute="leading" id="4PZ-iz-JIL"/>
+                        <constraint firstItem="FKt-Kn-8t0" firstAttribute="top" secondItem="Eec-wh-Sup" secondAttribute="bottom" id="5ku-RX-veg"/>
+                        <constraint firstAttribute="trailing" secondItem="Nui-Zf-GRw" secondAttribute="trailing" id="64o-cs-UUe"/>
+                        <constraint firstAttribute="bottom" secondItem="FKt-Kn-8t0" secondAttribute="bottom" id="97M-MZ-dHD"/>
+                        <constraint firstItem="KAj-0Z-ERX" firstAttribute="top" secondItem="4Wy-dT-WJa" secondAttribute="bottom" id="Fdh-97-wOW"/>
+                        <constraint firstAttribute="trailing" secondItem="KAj-0Z-ERX" secondAttribute="trailing" id="Hxf-ru-1OV"/>
+                        <constraint firstItem="KAj-0Z-ERX" firstAttribute="leading" secondItem="i43-Db-14O" secondAttribute="leading" id="In5-xa-FGX"/>
+                        <constraint firstAttribute="trailing" secondItem="4Wy-dT-WJa" secondAttribute="trailing" id="Jtq-MK-dhg"/>
+                        <constraint firstItem="Eec-wh-Sup" firstAttribute="leading" secondItem="i43-Db-14O" secondAttribute="leading" id="Qh7-Gy-wzD"/>
+                        <constraint firstAttribute="trailing" secondItem="FKt-Kn-8t0" secondAttribute="trailing" id="RM3-GG-XZw"/>
+                        <constraint firstItem="Nui-Zf-GRw" firstAttribute="top" secondItem="i43-Db-14O" secondAttribute="top" id="cFb-pm-EoQ"/>
+                        <constraint firstItem="Eec-wh-Sup" firstAttribute="top" secondItem="KAj-0Z-ERX" secondAttribute="bottom" id="jZK-Se-9iD"/>
+                        <constraint firstItem="4Wy-dT-WJa" firstAttribute="top" secondItem="Nui-Zf-GRw" secondAttribute="bottom" id="uLu-uz-zZB"/>
+                        <constraint firstItem="FKt-Kn-8t0" firstAttribute="leading" secondItem="i43-Db-14O" secondAttribute="leading" id="udr-Ps-R2R"/>
+                    </constraints>
+                </view>
+                <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LeM-Fw-QXw">
+                    <rect key="frame" x="62.5" y="417" width="250" height="250"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCt-DS-Urh">
+                    <rect key="frame" x="309" y="28" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="CfT-fR-kER"/>
+                    </constraints>
+                    <state key="normal" image="close"/>
+                    <connections>
+                        <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="plK-VM-SOf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5iD-af-HNw" firstAttribute="trailing" secondItem="eCt-DS-Urh" secondAttribute="trailing" constant="16" id="3CP-PL-vtT"/>
+                <constraint firstItem="eni-24-bQz" firstAttribute="top" secondItem="i43-Db-14O" secondAttribute="bottom" constant="12.5" id="I8N-Qm-Ski"/>
+                <constraint firstItem="i43-Db-14O" firstAttribute="trailing" secondItem="uDC-pc-d7u" secondAttribute="trailing" id="SiC-ez-EJj"/>
+                <constraint firstItem="5iD-af-HNw" firstAttribute="bottom" secondItem="uDC-pc-d7u" secondAttribute="bottom" constant="20" id="UCn-rQ-7yu"/>
+                <constraint firstItem="eni-24-bQz" firstAttribute="trailing" secondItem="uDC-pc-d7u" secondAttribute="trailing" id="axF-Za-IxT"/>
+                <constraint firstItem="eCt-DS-Urh" firstAttribute="top" secondItem="5iD-af-HNw" secondAttribute="top" constant="8" id="cOx-4G-CU7"/>
+                <constraint firstItem="5iD-af-HNw" firstAttribute="trailing" secondItem="uDC-pc-d7u" secondAttribute="trailing" constant="16" id="iLC-a1-DUa"/>
+                <constraint firstItem="eCt-DS-Urh" firstAttribute="width" secondItem="eCt-DS-Urh" secondAttribute="height" multiplier="1:1" id="ieA-ZR-6rj"/>
+                <constraint firstItem="uDC-pc-d7u" firstAttribute="top" secondItem="eni-24-bQz" secondAttribute="bottom" constant="8" id="okO-Kz-cMO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="5iD-af-HNw"/>
+            <point key="canvasLocation" x="94" y="141"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="40.5" height="40"/>
+        <image name="mic" width="50" height="50"/>
+    </resources>
+</document>

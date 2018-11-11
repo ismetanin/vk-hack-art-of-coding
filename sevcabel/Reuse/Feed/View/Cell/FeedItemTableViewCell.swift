@@ -22,7 +22,7 @@ final class FeedItemTableViewCell: UITableViewCell {
 
     func configure(with feedItem: FeedItem) {
         titleLabel.text = feedItem.title
-        subtitleLabel.text = feedItem.title
+        subtitleLabel.text = feedItem.subtitle
         feedItemImageView.image = feedItem.image
     }
     

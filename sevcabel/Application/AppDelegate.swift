@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyVK
 import VK_ios_sdk
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         VKSdk.initialize(withAppId: "6747854")?.register(self)
         VK.setUp(appId: "6747854", delegate: self)
+        FirebaseApp.configure()
         initializeRootView()
         return true
     }
@@ -55,7 +57,6 @@ extension AppDelegate: SwiftyVKDelegate {
     func vkTokenCreated(for sessionId: String, info: [String : String]) {
         // Called when user grants access and SwiftyVK gets new session token
         // Can be used to run SwiftyVK requests and save session data
-        print(sessionId)
     }
 
     func vkTokenUpdated(for sessionId: String, info: [String : String]) {

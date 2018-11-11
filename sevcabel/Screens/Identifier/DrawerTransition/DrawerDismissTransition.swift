@@ -43,11 +43,11 @@ final class DrawerDismissTransition: NSObject, UIViewControllerAnimatedTransitio
             animations: {
                 shadowView?.alpha = 0.0
                 fromViewController.view.frame.origin.y = fromViewController.view.frame.height
-        },
+            },
             completion: { _ in
                 shadowView?.removeFromSuperview()
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-        }
+            }
         )
     }
 

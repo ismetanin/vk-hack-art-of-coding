@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		0E3175412FAF54B76E25B5B9 /* Pods_sevcabelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433A64EA9E497A368E12729C /* Pods_sevcabelTests.framework */; };
 		107C7DB0E2690EBBD17E9B1F /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1080304847A3B28D57B7E7D /* AuthorizationViewController.swift */; };
+		31A6074B2197AC52008F49C1 /* GeoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6074A2197AC52008F49C1 /* GeoItem.swift */; };
+		31A6074E2197AC60008F49C1 /* FirebaseDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6074D2197AC60008F49C1 /* FirebaseDatabase.swift */; };
+		31A607532197AD43008F49C1 /* ARMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A607512197AD43008F49C1 /* ARMapViewController.swift */; };
+		31A607542197AD43008F49C1 /* ARMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A607522197AD43008F49C1 /* ARMapViewController.xib */; };
+		31A607572197ADAE008F49C1 /* AttitudeSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A607562197ADAE008F49C1 /* AttitudeSwitcher.swift */; };
+		31A607592197ADB6008F49C1 /* AppleSpeechKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A607582197ADB6008F49C1 /* AppleSpeechKitManager.swift */; };
+		31A6075B2197ADCC008F49C1 /* TextCardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6075A2197ADCC008F49C1 /* TextCardNode.swift */; };
+		31A6075D2197B256008F49C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31A6075C2197B255008F49C1 /* GoogleService-Info.plist */; };
 		3C10679FD4927776F1066544 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1F064516FD97D30FB9D40 /* MapViewController.swift */; };
 		4C603563BE504E65FFAAE7B9 /* Pods_sevcabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E349266AC8083161E0C3060 /* Pods_sevcabel.framework */; };
 		5E775AD8EE9F6FD9C5B37FD5 /* IdentifierViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E135AE2FC43607F203526F /* IdentifierViewController.storyboard */; };
@@ -35,6 +43,7 @@
 		8B87307D2197A0750059D4EA /* DrawerCustomTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B87307C2197A0750059D4EA /* DrawerCustomTransitionDelegate.swift */; };
 		8B8730802197A0BF0059D4EA /* DrawerDismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B87307F2197A0BF0059D4EA /* DrawerDismissTransition.swift */; };
 		8B8730822197A0D90059D4EA /* DrawerPresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8730812197A0D90059D4EA /* DrawerPresentTransition.swift */; };
+		8B8730842197ABAB0059D4EA /* StringAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8730832197ABAB0059D4EA /* StringAttributes.swift */; };
 		8BA619E92196244500375CD9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA619E82196244500375CD9 /* UIViewController.swift */; };
 		8BA619EC2196267A00375CD9 /* Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA619EB2196267A00375CD9 /* Switch.swift */; };
 		8BA619EE2196303D00375CD9 /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA619ED2196303D00375CD9 /* Pager.swift */; };
@@ -67,6 +76,14 @@
 /* Begin PBXFileReference section */
 		03201A4EB539F25669F8CA2C /* Pods-sevcabelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sevcabelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sevcabelTests/Pods-sevcabelTests.release.xcconfig"; sourceTree = "<group>"; };
 		24E135AE2FC43607F203526F /* IdentifierViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = IdentifierViewController.storyboard; sourceTree = "<group>"; };
+		31A6074A2197AC52008F49C1 /* GeoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoItem.swift; sourceTree = "<group>"; };
+		31A6074D2197AC60008F49C1 /* FirebaseDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDatabase.swift; sourceTree = "<group>"; };
+		31A607512197AD43008F49C1 /* ARMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMapViewController.swift; sourceTree = "<group>"; };
+		31A607522197AD43008F49C1 /* ARMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARMapViewController.xib; sourceTree = "<group>"; };
+		31A607562197ADAE008F49C1 /* AttitudeSwitcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttitudeSwitcher.swift; sourceTree = "<group>"; };
+		31A607582197ADB6008F49C1 /* AppleSpeechKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleSpeechKitManager.swift; sourceTree = "<group>"; };
+		31A6075A2197ADCC008F49C1 /* TextCardNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCardNode.swift; sourceTree = "<group>"; };
+		31A6075C2197B255008F49C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E349266AC8083161E0C3060 /* Pods_sevcabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sevcabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		433A64EA9E497A368E12729C /* Pods_sevcabelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sevcabelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A1E92A03C850F26CE380563 /* FeedItemDetailViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = FeedItemDetailViewController.storyboard; sourceTree = "<group>"; };
@@ -97,6 +114,7 @@
 		8B87307C2197A0750059D4EA /* DrawerCustomTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerCustomTransitionDelegate.swift; sourceTree = "<group>"; };
 		8B87307F2197A0BF0059D4EA /* DrawerDismissTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerDismissTransition.swift; sourceTree = "<group>"; };
 		8B8730812197A0D90059D4EA /* DrawerPresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerPresentTransition.swift; sourceTree = "<group>"; };
+		8B8730832197ABAB0059D4EA /* StringAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAttributes.swift; sourceTree = "<group>"; };
 		8BA619E82196244500375CD9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		8BA619EB2196267A00375CD9 /* Switch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switch.swift; sourceTree = "<group>"; };
 		8BA619ED2196303D00375CD9 /* Pager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
@@ -146,6 +164,41 @@
 				804C24A888A77415E6E8695C /* View */,
 			);
 			path = FeedItemDetail;
+			sourceTree = "<group>";
+		};
+		31A6074C2197AC55008F49C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31A6074D2197AC60008F49C1 /* FirebaseDatabase.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		31A6074F2197AD1D008F49C1 /* ARMap */ = {
+			isa = PBXGroup;
+			children = (
+				31A607502197AD24008F49C1 /* View */,
+			);
+			path = ARMap;
+			sourceTree = "<group>";
+		};
+		31A607502197AD24008F49C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31A6075A2197ADCC008F49C1 /* TextCardNode.swift */,
+				31A607512197AD43008F49C1 /* ARMapViewController.swift */,
+				31A607522197AD43008F49C1 /* ARMapViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		31A607552197ADA4008F49C1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				31A607582197ADB6008F49C1 /* AppleSpeechKitManager.swift */,
+				31A607562197ADAE008F49C1 /* AttitudeSwitcher.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		32DCBCBAAA78C00F610BE3A6 /* Feed */ = {
@@ -255,6 +308,8 @@
 		8B1B0E312195F42900735BC7 /* sevcabel */ = {
 			isa = PBXGroup;
 			children = (
+				31A607552197ADA4008F49C1 /* Utils */,
+				31A6074C2197AC55008F49C1 /* Model */,
 				8B1B0E522195F47300735BC7 /* Application */,
 				8B873079219790000059D4EA /* Entities */,
 				8BA619EA2196244B00375CD9 /* Extensions */,
@@ -279,6 +334,7 @@
 				8B1B0E322195F42900735BC7 /* AppDelegate.swift */,
 				8B1B0E3B2195F42B00735BC7 /* LaunchScreen.storyboard */,
 				8B1B0E3E2195F42B00735BC7 /* Info.plist */,
+				31A6075C2197B255008F49C1 /* GoogleService-Info.plist */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -295,6 +351,7 @@
 		8B1B0E542195F48100735BC7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				31A6074F2197AD1D008F49C1 /* ARMap */,
 				A193CA59B9398A44BE5417CA /* Map */,
 				BB0974E24931AF9CE7FE64EE /* Authorization */,
 				32DCBCBAAA78C00F610BE3A6 /* Feed */,
@@ -309,6 +366,8 @@
 		8B873079219790000059D4EA /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				8BA619F2219639CC00375CD9 /* FeedItem.swift */,
+				31A6074A2197AC52008F49C1 /* GeoItem.swift */,
 				8B87307721978FF90059D4EA /* User.swift */,
 			);
 			path = Entities;
@@ -336,6 +395,7 @@
 				8B60419B219747DE004BBBA8 /* UserDefaults.swift */,
 				8B6041952196FDAD004BBBA8 /* UIImage.swift */,
 				8B87307A219791920059D4EA /* UIImageView.swift */,
+				8B8730832197ABAB0059D4EA /* StringAttributes.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -353,18 +413,9 @@
 		8BA61A0221964BEC00375CD9 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				8BA61A0321964BFF00375CD9 /* Model */,
 				8BA61A0421964C0600375CD9 /* View */,
 			);
 			path = Feed;
-			sourceTree = "<group>";
-		};
-		8BA61A0321964BFF00375CD9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8BA619F2219639CC00375CD9 /* FeedItem.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		8BA61A0421964C0600375CD9 /* View */ = {
@@ -524,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B1B0E3D2195F42B00735BC7 /* LaunchScreen.storyboard in Resources */,
+				31A6075D2197B256008F49C1 /* GoogleService-Info.plist in Resources */,
 				8B1B0E3A2195F42B00735BC7 /* Assets.xcassets in Resources */,
 				779D645539E44978933BAE5C /* MapViewController.storyboard in Resources */,
 				8BA61A0D21965DC300375CD9 /* ProfileHeaderView.xib in Resources */,
@@ -531,6 +583,7 @@
 				8BA619F9219639F400375CD9 /* FeedItemTableViewCell.xib in Resources */,
 				87A2A2F1176B4B640E51F9E7 /* AuthorizationViewController.storyboard in Resources */,
 				72F9E9A070F890E336940BE6 /* ProfileViewController.storyboard in Resources */,
+				31A607542197AD43008F49C1 /* ARMapViewController.xib in Resources */,
 				C28834B521A1532E2DDF8683 /* FeedItemDetailViewController.storyboard in Resources */,
 				5E775AD8EE9F6FD9C5B37FD5 /* IdentifierViewController.storyboard in Resources */,
 			);
@@ -577,21 +630,31 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-sevcabel/Pods-sevcabel-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARCL/ARCL.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
 				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyVK/SwiftyVK.framework",
 				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARCL.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyVK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -630,10 +693,15 @@
 				8B3A7435219661AC00416FDA /* UIView.swift in Sources */,
 				8B6041942196FD98004BBBA8 /* CGImage.swift in Sources */,
 				8B1B0E332195F42900735BC7 /* AppDelegate.swift in Sources */,
+				31A607532197AD43008F49C1 /* ARMapViewController.swift in Sources */,
 				3C10679FD4927776F1066544 /* MapViewController.swift in Sources */,
 				8BA619F02196390000375CD9 /* FeedTableViewAdapter.swift in Sources */,
 				8BA619EC2196267A00375CD9 /* Switch.swift in Sources */,
+				31A6074B2197AC52008F49C1 /* GeoItem.swift in Sources */,
+				31A607572197ADAE008F49C1 /* AttitudeSwitcher.swift in Sources */,
+				31A6074E2197AC60008F49C1 /* FirebaseDatabase.swift in Sources */,
 				8BA61A0721964D9000375CD9 /* TabBar.swift in Sources */,
+				31A607592197ADB6008F49C1 /* AppleSpeechKitManager.swift in Sources */,
 				8BA619EE2196303D00375CD9 /* Pager.swift in Sources */,
 				8BA619F8219639F400375CD9 /* FeedItemTableViewCell.swift in Sources */,
 				8BA619FB21963B7900375CD9 /* UITableView.swift in Sources */,
@@ -651,9 +719,11 @@
 				89A564F82197F68700DD27D9 /* PointAnnotationView.swift in Sources */,
 				8B8730822197A0D90059D4EA /* DrawerPresentTransition.swift in Sources */,
 				8B87307B219791920059D4EA /* UIImageView.swift in Sources */,
+				31A6075B2197ADCC008F49C1 /* TextCardNode.swift in Sources */,
 				8BA619E92196244500375CD9 /* UIViewController.swift in Sources */,
 				8B604198219745ED004BBBA8 /* Constants.swift in Sources */,
 				107C7DB0E2690EBBD17E9B1F /* AuthorizationViewController.swift in Sources */,
+				8B8730842197ABAB0059D4EA /* StringAttributes.swift in Sources */,
 				8B6041962196FDAD004BBBA8 /* UIImage.swift in Sources */,
 				FFBE45CA1A321578D3227C3E /* ProfileViewController.swift in Sources */,
 				B2CD82941B380DE1F75751BA /* FeedItemDetailViewController.swift in Sources */,
