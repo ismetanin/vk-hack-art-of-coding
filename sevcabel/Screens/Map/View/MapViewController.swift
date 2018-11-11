@@ -128,6 +128,7 @@ final class MapViewController: UIViewController {
                 let isUrgency = item.urgency >= 2
                 
                 let annotation = PointAnnotation(type: type, coordinate: coords)
+                annotation.title = item.title
                 
                 if isUrgency {
                     annotation.isPulsing = true
