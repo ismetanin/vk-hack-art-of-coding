@@ -48,10 +48,10 @@ final class DrawerPresentTransition: NSObject, UIViewControllerAnimatedTransitio
             animations: {
                 shadowView.alpha = 1.0
                 toViewController.view.frame.origin.y = 0.0
-        },
+            },
             completion: { _ in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-        }
+            }
         )
     }
 

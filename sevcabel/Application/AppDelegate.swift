@@ -57,7 +57,6 @@ extension AppDelegate: SwiftyVKDelegate {
     func vkTokenCreated(for sessionId: String, info: [String : String]) {
         // Called when user grants access and SwiftyVK gets new session token
         // Can be used to run SwiftyVK requests and save session data
-        print(sessionId)
     }
 
     func vkTokenUpdated(for sessionId: String, info: [String : String]) {
