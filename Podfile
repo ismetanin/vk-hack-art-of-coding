@@ -1,15 +1,18 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '11.0'
 
 inhibit_all_warnings!
 
 target 'sevcabel' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
+  pod 'Mapbox-iOS-SDK'
 	pod 'VK-ios-sdk'
 	pod 'SwiftyVK'
 	pod 'Nuke'
+    
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'CodableFirebase'
 
   target 'sevcabelTests' do
     inherit! :search_paths

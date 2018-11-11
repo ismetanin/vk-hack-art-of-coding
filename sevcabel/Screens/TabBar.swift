@@ -44,7 +44,7 @@ final class TabBar: UITabBarController {
     private func tabBarControllers() -> [UIViewController] {
         var controllers: [UIViewController] = []
 
-        let now = UIViewController()
+        let now = MapNavigationController()
         now.tabBarItem = UITabBarItem(
             title: "Сейчас",
             image: UIImage(named: "maps-and-flags"),

@@ -9,16 +9,20 @@
 /* Begin PBXBuildFile section */
 		0E3175412FAF54B76E25B5B9 /* Pods_sevcabelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433A64EA9E497A368E12729C /* Pods_sevcabelTests.framework */; };
 		107C7DB0E2690EBBD17E9B1F /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1080304847A3B28D57B7E7D /* AuthorizationViewController.swift */; };
+		31A6074B2197AC52008F49C1 /* GeoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6074A2197AC52008F49C1 /* GeoItem.swift */; };
+		31A6074E2197AC60008F49C1 /* FirebaseDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6074D2197AC60008F49C1 /* FirebaseDatabase.swift */; };
+		3C10679FD4927776F1066544 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1F064516FD97D30FB9D40 /* MapViewController.swift */; };
 		4C603563BE504E65FFAAE7B9 /* Pods_sevcabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E349266AC8083161E0C3060 /* Pods_sevcabel.framework */; };
 		5E775AD8EE9F6FD9C5B37FD5 /* IdentifierViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E135AE2FC43607F203526F /* IdentifierViewController.storyboard */; };
 		610EDEBA741623156B12B33E /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA41C1F88FBA909723CB39C /* FeedViewController.storyboard */; };
 		630EF828B67AB9E8B2B45FC2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41184B5D3F30845B8BA30F /* FeedViewController.swift */; };
 		72F9E9A070F890E336940BE6 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F5A3B4DC2B8F1A35A819B3 /* ProfileViewController.storyboard */; };
+		779D645539E44978933BAE5C /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A89BD8794D299ED698DE5C4 /* MapViewController.storyboard */; };
 		87A2A2F1176B4B640E51F9E7 /* AuthorizationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BE5821EF9B2F374116E894 /* AuthorizationViewController.storyboard */; };
+		8933A0642196E7D000935313 /* MapNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933A0632196E7D000935313 /* MapNavigationController.swift */; };
 		8B1B0E332195F42900735BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B0E322195F42900735BC7 /* AppDelegate.swift */; };
 		8B1B0E3A2195F42B00735BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B0E392195F42B00735BC7 /* Assets.xcassets */; };
 		8B1B0E3D2195F42B00735BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B0E3B2195F42B00735BC7 /* LaunchScreen.storyboard */; };
-		8B1B0E562195F5FA00735BC7 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B0E552195F5FA00735BC7 /* .gitkeep */; };
 		8B3A7435219661AC00416FDA /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A7434219661AC00416FDA /* UIView.swift */; };
 		8B6041942196FD98004BBBA8 /* CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6041932196FD98004BBBA8 /* CGImage.swift */; };
 		8B6041962196FDAD004BBBA8 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6041952196FDAD004BBBA8 /* UIImage.swift */; };
@@ -63,13 +67,17 @@
 /* Begin PBXFileReference section */
 		03201A4EB539F25669F8CA2C /* Pods-sevcabelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sevcabelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sevcabelTests/Pods-sevcabelTests.release.xcconfig"; sourceTree = "<group>"; };
 		24E135AE2FC43607F203526F /* IdentifierViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = IdentifierViewController.storyboard; sourceTree = "<group>"; };
+		31A6074A2197AC52008F49C1 /* GeoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoItem.swift; sourceTree = "<group>"; };
+		31A6074D2197AC60008F49C1 /* FirebaseDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDatabase.swift; sourceTree = "<group>"; };
 		3E349266AC8083161E0C3060 /* Pods_sevcabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sevcabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		433A64EA9E497A368E12729C /* Pods_sevcabelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sevcabelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A1E92A03C850F26CE380563 /* FeedItemDetailViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = FeedItemDetailViewController.storyboard; sourceTree = "<group>"; };
+		4A89BD8794D299ED698DE5C4 /* MapViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		5A41184B5D3F30845B8BA30F /* FeedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		6B3FF405944B1D96F0841A7D /* ProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		73234F0192126586EBE6F28E /* Pods-sevcabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sevcabel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sevcabel/Pods-sevcabel.debug.xcconfig"; sourceTree = "<group>"; };
 		87D31F1BD2186269F58788A7 /* FeedItemDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedItemDetailViewController.swift; sourceTree = "<group>"; };
+		8933A0632196E7D000935313 /* MapNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavigationController.swift; sourceTree = "<group>"; };
 		8B1B0E2F2195F42900735BC7 /* sevcabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sevcabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1B0E322195F42900735BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B1B0E392195F42B00735BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,7 +85,6 @@
 		8B1B0E3E2195F42B00735BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B1B0E432195F42B00735BC7 /* sevcabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sevcabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1B0E492195F42B00735BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B1B0E552195F5FA00735BC7 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		8B3A7434219661AC00416FDA /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8B6041932196FD98004BBBA8 /* CGImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImage.swift; sourceTree = "<group>"; };
 		8B6041952196FDAD004BBBA8 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -105,6 +112,7 @@
 		8BA61A0C21965DC300375CD9 /* ProfileHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
 		97D5ADD98DB4D135B6BDAAF8 /* IdentifierViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IdentifierViewController.swift; sourceTree = "<group>"; };
 		BE4325475F9ADCEDCB6E3135 /* Pods-sevcabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sevcabel.release.xcconfig"; path = "Pods/Target Support Files/Pods-sevcabel/Pods-sevcabel.release.xcconfig"; sourceTree = "<group>"; };
+		BFF1F064516FD97D30FB9D40 /* MapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C3BE5821EF9B2F374116E894 /* AuthorizationViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = AuthorizationViewController.storyboard; sourceTree = "<group>"; };
 		C3F5A3B4DC2B8F1A35A819B3 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		D1080304847A3B28D57B7E7D /* AuthorizationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +148,14 @@
 			path = FeedItemDetail;
 			sourceTree = "<group>";
 		};
+		31A6074C2197AC55008F49C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31A6074D2197AC60008F49C1 /* FirebaseDatabase.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		32DCBCBAAA78C00F610BE3A6 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +182,15 @@
 				03201A4EB539F25669F8CA2C /* Pods-sevcabelTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6E8867A34CE2BC02C22FB157 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1F064516FD97D30FB9D40 /* MapViewController.swift */,
+				4A89BD8794D299ED698DE5C4 /* MapViewController.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7725E1D228FA7EB5B1A78DB7 /* Frameworks */ = {
@@ -218,12 +243,13 @@
 		8B1B0E312195F42900735BC7 /* sevcabel */ = {
 			isa = PBXGroup;
 			children = (
+				31A6074C2197AC55008F49C1 /* Model */,
 				8B1B0E522195F47300735BC7 /* Application */,
 				8B873079219790000059D4EA /* Entities */,
 				8BA619EA2196244B00375CD9 /* Extensions */,
-				8B1B0E532195F47800735BC7 /* Resources */,
 				8BA61A0021964BD600375CD9 /* Reuse */,
 				8B1B0E542195F48100735BC7 /* Screens */,
+				8B1B0E532195F47800735BC7 /* Resources */,
 			);
 			path = sevcabel;
 			sourceTree = "<group>";
@@ -258,7 +284,7 @@
 		8B1B0E542195F48100735BC7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				8B1B0E552195F5FA00735BC7 /* .gitkeep */,
+				A193CA59B9398A44BE5417CA /* Map */,
 				BB0974E24931AF9CE7FE64EE /* Authorization */,
 				32DCBCBAAA78C00F610BE3A6 /* Feed */,
 				14F14B36ADA5B25A148653D2 /* FeedItemDetail */,
@@ -273,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				8BA619F2219639CC00375CD9 /* FeedItem.swift */,
+				31A6074A2197AC52008F49C1 /* GeoItem.swift */,
 				8B87307721978FF90059D4EA /* User.swift */,
 			);
 			path = Entities;
@@ -351,6 +378,15 @@
 				8BA61A0C21965DC300375CD9 /* ProfileHeaderView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A193CA59B9398A44BE5417CA /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				8933A0632196E7D000935313 /* MapNavigationController.swift */,
+				6E8867A34CE2BC02C22FB157 /* View */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		BB0974E24931AF9CE7FE64EE /* Authorization */ = {
@@ -471,9 +507,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B1B0E562195F5FA00735BC7 /* .gitkeep in Resources */,
 				8B1B0E3D2195F42B00735BC7 /* LaunchScreen.storyboard in Resources */,
 				8B1B0E3A2195F42B00735BC7 /* Assets.xcassets in Resources */,
+				779D645539E44978933BAE5C /* MapViewController.storyboard in Resources */,
 				8BA61A0D21965DC300375CD9 /* ProfileHeaderView.xib in Resources */,
 				610EDEBA741623156B12B33E /* FeedViewController.storyboard in Resources */,
 				8BA619F9219639F400375CD9 /* FeedItemTableViewCell.xib in Resources */,
@@ -525,17 +561,29 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-sevcabel/Pods-sevcabel-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyVK/SwiftyVK.framework",
 				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyVK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -574,8 +622,11 @@
 				8B3A7435219661AC00416FDA /* UIView.swift in Sources */,
 				8B6041942196FD98004BBBA8 /* CGImage.swift in Sources */,
 				8B1B0E332195F42900735BC7 /* AppDelegate.swift in Sources */,
+				3C10679FD4927776F1066544 /* MapViewController.swift in Sources */,
 				8BA619F02196390000375CD9 /* FeedTableViewAdapter.swift in Sources */,
 				8BA619EC2196267A00375CD9 /* Switch.swift in Sources */,
+				31A6074B2197AC52008F49C1 /* GeoItem.swift in Sources */,
+				31A6074E2197AC60008F49C1 /* FirebaseDatabase.swift in Sources */,
 				8BA61A0721964D9000375CD9 /* TabBar.swift in Sources */,
 				8BA619EE2196303D00375CD9 /* Pager.swift in Sources */,
 				8BA619F8219639F400375CD9 /* FeedItemTableViewCell.swift in Sources */,
@@ -584,6 +635,7 @@
 				630EF828B67AB9E8B2B45FC2 /* FeedViewController.swift in Sources */,
 				8BA619FF21963DE600375CD9 /* FeedBlockViewController.swift in Sources */,
 				8BA619FD21963B8D00375CD9 /* NSObject.swift in Sources */,
+				8933A0642196E7D000935313 /* MapNavigationController.swift in Sources */,
 				8B60419A2197460A004BBBA8 /* NSNotification.Name.swift in Sources */,
 				8B60419C219747DE004BBBA8 /* UserDefaults.swift in Sources */,
 				8B8730802197A0BF0059D4EA /* DrawerDismissTransition.swift in Sources */,
