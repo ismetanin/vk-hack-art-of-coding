@@ -13,6 +13,8 @@ target 'sevcabel' do
     pod 'Firebase/Core'
     pod 'Firebase/Database'
     pod 'CodableFirebase'
+    
+    pod 'ARCL'
 
   target 'sevcabelTests' do
     inherit! :search_paths

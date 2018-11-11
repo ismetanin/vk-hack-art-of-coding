@@ -11,6 +11,12 @@
 		107C7DB0E2690EBBD17E9B1F /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1080304847A3B28D57B7E7D /* AuthorizationViewController.swift */; };
 		31A6074B2197AC52008F49C1 /* GeoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6074A2197AC52008F49C1 /* GeoItem.swift */; };
 		31A6074E2197AC60008F49C1 /* FirebaseDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6074D2197AC60008F49C1 /* FirebaseDatabase.swift */; };
+		31A607532197AD43008F49C1 /* ARMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A607512197AD43008F49C1 /* ARMapViewController.swift */; };
+		31A607542197AD43008F49C1 /* ARMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A607522197AD43008F49C1 /* ARMapViewController.xib */; };
+		31A607572197ADAE008F49C1 /* AttitudeSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A607562197ADAE008F49C1 /* AttitudeSwitcher.swift */; };
+		31A607592197ADB6008F49C1 /* AppleSpeechKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A607582197ADB6008F49C1 /* AppleSpeechKitManager.swift */; };
+		31A6075B2197ADCC008F49C1 /* TextCardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A6075A2197ADCC008F49C1 /* TextCardNode.swift */; };
+		31A6075D2197B256008F49C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31A6075C2197B255008F49C1 /* GoogleService-Info.plist */; };
 		3C10679FD4927776F1066544 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1F064516FD97D30FB9D40 /* MapViewController.swift */; };
 		4C603563BE504E65FFAAE7B9 /* Pods_sevcabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E349266AC8083161E0C3060 /* Pods_sevcabel.framework */; };
 		5E775AD8EE9F6FD9C5B37FD5 /* IdentifierViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E135AE2FC43607F203526F /* IdentifierViewController.storyboard */; };
@@ -68,6 +74,12 @@
 		24E135AE2FC43607F203526F /* IdentifierViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = IdentifierViewController.storyboard; sourceTree = "<group>"; };
 		31A6074A2197AC52008F49C1 /* GeoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoItem.swift; sourceTree = "<group>"; };
 		31A6074D2197AC60008F49C1 /* FirebaseDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDatabase.swift; sourceTree = "<group>"; };
+		31A607512197AD43008F49C1 /* ARMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMapViewController.swift; sourceTree = "<group>"; };
+		31A607522197AD43008F49C1 /* ARMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARMapViewController.xib; sourceTree = "<group>"; };
+		31A607562197ADAE008F49C1 /* AttitudeSwitcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttitudeSwitcher.swift; sourceTree = "<group>"; };
+		31A607582197ADB6008F49C1 /* AppleSpeechKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleSpeechKitManager.swift; sourceTree = "<group>"; };
+		31A6075A2197ADCC008F49C1 /* TextCardNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCardNode.swift; sourceTree = "<group>"; };
+		31A6075C2197B255008F49C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E349266AC8083161E0C3060 /* Pods_sevcabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sevcabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		433A64EA9E497A368E12729C /* Pods_sevcabelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sevcabelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A1E92A03C850F26CE380563 /* FeedItemDetailViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = FeedItemDetailViewController.storyboard; sourceTree = "<group>"; };
@@ -152,6 +164,33 @@
 				31A6074D2197AC60008F49C1 /* FirebaseDatabase.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		31A6074F2197AD1D008F49C1 /* ARMap */ = {
+			isa = PBXGroup;
+			children = (
+				31A607502197AD24008F49C1 /* View */,
+			);
+			path = ARMap;
+			sourceTree = "<group>";
+		};
+		31A607502197AD24008F49C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31A6075A2197ADCC008F49C1 /* TextCardNode.swift */,
+				31A607512197AD43008F49C1 /* ARMapViewController.swift */,
+				31A607522197AD43008F49C1 /* ARMapViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		31A607552197ADA4008F49C1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				31A607582197ADB6008F49C1 /* AppleSpeechKitManager.swift */,
+				31A607562197ADAE008F49C1 /* AttitudeSwitcher.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		32DCBCBAAA78C00F610BE3A6 /* Feed */ = {
@@ -241,6 +280,7 @@
 		8B1B0E312195F42900735BC7 /* sevcabel */ = {
 			isa = PBXGroup;
 			children = (
+				31A607552197ADA4008F49C1 /* Utils */,
 				31A6074C2197AC55008F49C1 /* Model */,
 				8B1B0E522195F47300735BC7 /* Application */,
 				8B873079219790000059D4EA /* Entities */,
@@ -266,6 +306,7 @@
 				8B1B0E322195F42900735BC7 /* AppDelegate.swift */,
 				8B1B0E3B2195F42B00735BC7 /* LaunchScreen.storyboard */,
 				8B1B0E3E2195F42B00735BC7 /* Info.plist */,
+				31A6075C2197B255008F49C1 /* GoogleService-Info.plist */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -282,6 +323,7 @@
 		8B1B0E542195F48100735BC7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				31A6074F2197AD1D008F49C1 /* ARMap */,
 				A193CA59B9398A44BE5417CA /* Map */,
 				BB0974E24931AF9CE7FE64EE /* Authorization */,
 				32DCBCBAAA78C00F610BE3A6 /* Feed */,
@@ -513,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B1B0E3D2195F42B00735BC7 /* LaunchScreen.storyboard in Resources */,
+				31A6075D2197B256008F49C1 /* GoogleService-Info.plist in Resources */,
 				8B1B0E3A2195F42B00735BC7 /* Assets.xcassets in Resources */,
 				779D645539E44978933BAE5C /* MapViewController.storyboard in Resources */,
 				8BA61A0D21965DC300375CD9 /* ProfileHeaderView.xib in Resources */,
@@ -520,6 +563,7 @@
 				8BA619F9219639F400375CD9 /* FeedItemTableViewCell.xib in Resources */,
 				87A2A2F1176B4B640E51F9E7 /* AuthorizationViewController.storyboard in Resources */,
 				72F9E9A070F890E336940BE6 /* ProfileViewController.storyboard in Resources */,
+				31A607542197AD43008F49C1 /* ARMapViewController.xib in Resources */,
 				C28834B521A1532E2DDF8683 /* FeedItemDetailViewController.storyboard in Resources */,
 				5E775AD8EE9F6FD9C5B37FD5 /* IdentifierViewController.storyboard in Resources */,
 			);
@@ -566,6 +610,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-sevcabel/Pods-sevcabel-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARCL/ARCL.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
@@ -580,6 +625,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARCL.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
@@ -627,12 +673,15 @@
 				8B3A7435219661AC00416FDA /* UIView.swift in Sources */,
 				8B6041942196FD98004BBBA8 /* CGImage.swift in Sources */,
 				8B1B0E332195F42900735BC7 /* AppDelegate.swift in Sources */,
+				31A607532197AD43008F49C1 /* ARMapViewController.swift in Sources */,
 				3C10679FD4927776F1066544 /* MapViewController.swift in Sources */,
 				8BA619F02196390000375CD9 /* FeedTableViewAdapter.swift in Sources */,
 				8BA619EC2196267A00375CD9 /* Switch.swift in Sources */,
 				31A6074B2197AC52008F49C1 /* GeoItem.swift in Sources */,
+				31A607572197ADAE008F49C1 /* AttitudeSwitcher.swift in Sources */,
 				31A6074E2197AC60008F49C1 /* FirebaseDatabase.swift in Sources */,
 				8BA61A0721964D9000375CD9 /* TabBar.swift in Sources */,
+				31A607592197ADB6008F49C1 /* AppleSpeechKitManager.swift in Sources */,
 				8BA619EE2196303D00375CD9 /* Pager.swift in Sources */,
 				8BA619F8219639F400375CD9 /* FeedItemTableViewCell.swift in Sources */,
 				8BA619FB21963B7900375CD9 /* UITableView.swift in Sources */,
@@ -647,6 +696,7 @@
 				8BA619F3219639CC00375CD9 /* FeedItem.swift in Sources */,
 				8B8730822197A0D90059D4EA /* DrawerPresentTransition.swift in Sources */,
 				8B87307B219791920059D4EA /* UIImageView.swift in Sources */,
+				31A6075B2197ADCC008F49C1 /* TextCardNode.swift in Sources */,
 				8BA619E92196244500375CD9 /* UIViewController.swift in Sources */,
 				8B604198219745ED004BBBA8 /* Constants.swift in Sources */,
 				107C7DB0E2690EBBD17E9B1F /* AuthorizationViewController.swift in Sources */,
